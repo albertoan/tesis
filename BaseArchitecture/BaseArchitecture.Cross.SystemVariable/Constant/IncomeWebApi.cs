@@ -37,6 +37,7 @@
             {
                 public const string ListProyectos = "ListProyectos";
                 public const string GetProyectoById = "GetProyectoById";
+                public const string GetListProyectoByIdProyecto = "GetListProyectoByIdProyecto";                
                 public const string ListProyectoCodigo = "ListProyectoCodigo";
                 public const string ListUBIGEO = "ListUBIGEO";
                 public const string ListProgramacion = "ListProgramacion";

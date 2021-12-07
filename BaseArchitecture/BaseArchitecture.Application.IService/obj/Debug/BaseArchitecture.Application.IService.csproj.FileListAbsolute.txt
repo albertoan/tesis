@@ -66,3 +66,20 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.IService
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.IService\obj\Debug\BaseArchitecture.Application.IService.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.IService\obj\Debug\BaseArchitecture.Application.IService.pdb
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.IService\obj\Debug\BaseArchitecture.Application.IService.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\BaseArchitecture.Application.IService.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\BaseArchitecture.Application.IService.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\obj\Debug\BaseArchitecture.Application.IService.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\obj\Debug\BaseArchitecture.Application.IService.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\obj\Debug\BaseArchitecture.Application.IService.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\obj\Debug\BaseArchitecture.Application.IService.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.IService\obj\Debug\BaseArchitecture.Application.IService.pdb

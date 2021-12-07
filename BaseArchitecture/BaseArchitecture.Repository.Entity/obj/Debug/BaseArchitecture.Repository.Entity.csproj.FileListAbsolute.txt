@@ -50,3 +50,16 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.Entity\ob
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.csproj.CopyComplete
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.pdb

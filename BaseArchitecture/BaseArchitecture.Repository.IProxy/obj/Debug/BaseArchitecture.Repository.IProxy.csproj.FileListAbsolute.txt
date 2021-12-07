@@ -66,3 +66,20 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.IProxy\ob
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.IProxy\obj\Debug\BaseArchitecture.Repository.IProxy.csproj.CopyComplete
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.IProxy\obj\Debug\BaseArchitecture.Repository.IProxy.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.IProxy\obj\Debug\BaseArchitecture.Repository.IProxy.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\BaseArchitecture.Repository.IProxy.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\BaseArchitecture.Repository.IProxy.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\obj\Debug\BaseArchitecture.Repository.IProxy.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\obj\Debug\BaseArchitecture.Repository.IProxy.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\obj\Debug\BaseArchitecture.Repository.IProxy.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\obj\Debug\BaseArchitecture.Repository.IProxy.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.IProxy\obj\Debug\BaseArchitecture.Repository.IProxy.pdb

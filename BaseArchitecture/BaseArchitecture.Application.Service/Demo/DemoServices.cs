@@ -98,6 +98,13 @@ namespace BaseArchitecture.Application.Service.Demo
             return result;
         }
 
+        public Response<ProyectoResponse> GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest)
+        {
+            var result = DemoQuery.GetListProyectoByIdProyecto(proyectoRequest);
+            return result;
+        }
+
+
         public Response<PersonResponse> GetPersonById(PersonBaseRequest personBaseRequest)
         {
             var result = DemoQuery.GetPersonById(personBaseRequest);

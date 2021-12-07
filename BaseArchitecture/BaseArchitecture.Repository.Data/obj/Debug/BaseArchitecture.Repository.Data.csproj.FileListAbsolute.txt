@@ -82,3 +82,24 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.Data\obj\
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.pdb
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Repository.Data.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Repository.Data.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Repository.IData.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\Dapper.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\BaseArchitecture.Repository.IData.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\Dapper.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.pdb

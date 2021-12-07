@@ -74,3 +74,22 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Deb
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Debug\BaseArchitecture.Cross.Mapper.csproj.CopyComplete
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Debug\BaseArchitecture.Cross.Mapper.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Debug\BaseArchitecture.Cross.Mapper.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\BaseArchitecture.Cross.Mapper.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\BaseArchitecture.Cross.Mapper.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\AutoMapper.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\AutoMapper.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Debug\BaseArchitecture.Cross.Mapper.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Debug\BaseArchitecture.Cross.Mapper.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Debug\BaseArchitecture.Cross.Mapper.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Debug\BaseArchitecture.Cross.Mapper.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Mapper\obj\Debug\BaseArchitecture.Cross.Mapper.pdb

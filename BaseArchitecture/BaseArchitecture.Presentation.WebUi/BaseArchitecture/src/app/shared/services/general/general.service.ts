@@ -75,6 +75,18 @@ export class GeneralService {
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   }
 
+  GetListProyectoByIdProyecto(proyecto): Observable<any> {
+    return this.http
+      .get<any>(
+        this.urlWebApi + Path.Siscose + Siscose.GetListProyectoByIdProyecto,
+        {
+          observe: 'body',
+          params: { proyectoRequest: JSON.stringify(proyecto) },
+        }
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
   ListProyectoCodigo(): Observable<any> {
     return this.http
       .get<any>(

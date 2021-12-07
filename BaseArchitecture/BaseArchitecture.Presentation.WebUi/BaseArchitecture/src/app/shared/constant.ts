@@ -16,6 +16,7 @@ export const Security = {
 export const Siscose = {
   ListProyectos: 'ListProyectos',
   GetProyectoById: 'GetProyectoById',
+  GetListProyectoByIdProyecto: 'GetListProyectoByIdProyecto',
   ListProyectoCodigo: 'ListProyectoCodigo',
   ListUBIGEO: 'ListUBIGEO',
   ListProgramacion: 'ListProgramacion',

@@ -114,3 +114,32 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Security\obj\D
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Security\obj\Debug\BaseArchitecture.Cross.Security.csproj.CopyComplete
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Security\obj\Debug\BaseArchitecture.Cross.Security.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Security\obj\Debug\BaseArchitecture.Cross.Security.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\BaseArchitecture.Cross.Security.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\BaseArchitecture.Cross.Security.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\AWSSDK.Core.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\FW.Cognito.Integration.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\NLog.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\System.Net.Http.Formatting.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\System.Web.Cors.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\System.Web.Http.Cors.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\System.Web.Http.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\AWSSDK.CognitoIdentity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\AWSSDK.SecurityToken.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\System.Net.Http.Formatting.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\System.Web.Http.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\System.Web.Http.Cors.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\obj\Debug\BaseArchitecture.Cross.Security.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\obj\Debug\BaseArchitecture.Cross.Security.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\obj\Debug\BaseArchitecture.Cross.Security.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\obj\Debug\BaseArchitecture.Cross.Security.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Security\obj\Debug\BaseArchitecture.Cross.Security.pdb

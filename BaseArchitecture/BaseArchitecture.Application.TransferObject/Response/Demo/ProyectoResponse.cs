@@ -29,5 +29,7 @@ namespace BaseArchitecture.Application.TransferObject.Response.Demo
 		public string FechaVisita { set; get; }
 		public string NombresCompleto { set; get; }
 		public List<ProyectoActividadesResponse> ProyectoActividadesResponse { set; get; }
+		public List<InsumosResponse> ListInsumosResponse { set; get; }
+		
 	}
 }

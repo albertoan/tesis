@@ -57,3 +57,18 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.Transfer
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CoreCompileInputs.cache
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.pdb

@@ -19,6 +19,7 @@ namespace BaseArchitecture.Repository.IData.NonTransactional
         Response<int> RegProgramacion(ProgramacionRequest programacionRequest);
         Response<int> RegProyecto(ProyectoRequest proyectoRequest);
         Response<ProyectoResponse> GetProyectoById(ProyectoRequest proyectoRequest);
+        Response<ProyectoResponse> GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest);
         Response<OffLineInformeResponse> ListProyectoInforme();
         IEnumerable<CronogramaResponse> ListProyectoCronograma(); 
         Response<LoginResponse> ValidateUser(string email);

@@ -41,3 +41,14 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.SystemVariable
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.CoreCompileInputs.cache
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.pdb

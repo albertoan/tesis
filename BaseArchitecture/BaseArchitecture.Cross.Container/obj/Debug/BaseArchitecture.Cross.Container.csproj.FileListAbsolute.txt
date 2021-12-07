@@ -98,3 +98,28 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Container\obj\
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Container\obj\Debug\BaseArchitecture.Cross.Container.csproj.CopyComplete
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Container\obj\Debug\BaseArchitecture.Cross.Container.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.Container\obj\Debug\BaseArchitecture.Cross.Container.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\BaseArchitecture.Cross.Container.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\BaseArchitecture.Cross.Container.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\Castle.Core.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\Castle.Windsor.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\NLog.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\System.Net.Http.Formatting.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\System.Web.Http.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\System.Web.Http.WebHost.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\Castle.Core.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\Castle.Windsor.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\NLog.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\System.Net.Http.Formatting.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\System.Web.Http.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\System.Web.Http.WebHost.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\obj\Debug\BaseArchitecture.Cross.Container.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\obj\Debug\BaseArchitecture.Cross.Container.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\obj\Debug\BaseArchitecture.Cross.Container.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\obj\Debug\BaseArchitecture.Cross.Container.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.Container\obj\Debug\BaseArchitecture.Cross.Container.pdb

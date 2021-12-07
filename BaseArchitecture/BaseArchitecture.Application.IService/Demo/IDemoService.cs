@@ -21,6 +21,7 @@ namespace BaseArchitecture.Application.IService.Demo
         Response<int> RegProgramacion(ProgramacionRequest programacionRequest);
         Response<int> RegProyecto(ProyectoRequest proyectoRequest);
         Response<ProyectoResponse> GetProyectoById(ProyectoRequest proyectoRequest);
+        Response<ProyectoResponse> GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest);
         Response<PersonResponse> GetPersonById(PersonBaseRequest personBaseRequest);
         Response<int> UpdPersonState(PersonBaseRequest personBaseRequest, BaseRecordRequest baseRecordRequest);
         Response<int> RegPerson(PersonRequest personRequest, BaseRecordRequest baseRecordRequest);

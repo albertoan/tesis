@@ -105,6 +105,16 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.GetListProyectoByIdProyecto)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest)
+        {
+            var result = DemoService.GetListProyectoByIdProyecto(proyectoRequest);
+            return Ok(result);
+        }
+
+        [HttpPost]
         [Route(IncomeWebApi.MethodApi.Siscose.ListProyectoCodigo)]
         [RequestLoggerFilterAttribute]
         [UnControlledExceptionFilterAttribute]

@@ -153,6 +153,20 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
         [HttpGet]
         [RequestLoggerFilterAttribute]
         [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.GetListProyectoByIdProyecto)]
+        public IHttpActionResult GetListProyectoByIdProyecto()
+        {
+            var postData = HttpContext.Current.Request.Params["proyectoRequest"];
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.GetListProyectoByIdProyecto}";
+            var result =
+              InvokeWebApi.InvokePostAnonymousEntity<Response<ProyectoResponse>>(urlApi, postData);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
         [Route(IncomeWebApi.MethodApi.Siscose.ListProyectoCodigo)]
         public IHttpActionResult ListProyectoCodigo()
         {

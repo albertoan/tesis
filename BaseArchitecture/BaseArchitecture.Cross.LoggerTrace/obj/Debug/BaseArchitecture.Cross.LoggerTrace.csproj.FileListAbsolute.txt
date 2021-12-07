@@ -114,3 +114,32 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\ob
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\obj\Debug\BaseArchitecture.Cross.LoggerTrace.csproj.CopyComplete
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\obj\Debug\BaseArchitecture.Cross.LoggerTrace.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\obj\Debug\BaseArchitecture.Cross.LoggerTrace.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\BaseArchitecture.Cross.LoggerTrace.dll.config
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\BaseArchitecture.Cross.LoggerTrace.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\BaseArchitecture.Cross.LoggerTrace.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\Microsoft.Owin.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\Newtonsoft.Json.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\NLog.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\Owin.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\System.Net.Http.Formatting.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\System.Web.Http.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\System.Web.Http.Owin.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\System.Web.Http.WebHost.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\EPPlus.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\Microsoft.Owin.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\Newtonsoft.Json.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\NLog.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\System.Net.Http.Formatting.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\System.Web.Http.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\System.Web.Http.Owin.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\System.Web.Http.WebHost.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\bin\Debug\EPPlus.xml
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\obj\Debug\BaseArchitecture.Cross.LoggerTrace.csproj.AssemblyReference.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\obj\Debug\BaseArchitecture.Cross.LoggerTrace.csproj.CoreCompileInputs.cache
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\obj\Debug\BaseArchitecture.Cross.LoggerTrace.csproj.CopyComplete
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\obj\Debug\BaseArchitecture.Cross.LoggerTrace.dll
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.LoggerTrace\obj\Debug\BaseArchitecture.Cross.LoggerTrace.pdb

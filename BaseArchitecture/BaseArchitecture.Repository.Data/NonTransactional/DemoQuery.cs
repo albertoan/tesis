@@ -112,6 +112,39 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
             return response;
         }
 
+
+        public Response<ProyectoResponse> GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest)
+        {
+            Response<ProyectoResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@IdProyecto", proyectoRequest.IdProyecto);
+
+
+                var basicResponse = new ProyectoResponse();
+                using (var list = connection.QueryMultipleAsync(
+                    sql: $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.ListProyectoByIdProyecto}",
+                    param: parameters,
+                    commandType: CommandType.StoredProcedure).Result)
+                {
+                    basicResponse = list.Read<ProyectoResponse>().ToList().FirstOrDefault();
+                    basicResponse.ListInsumosResponse = list.Read<InsumosResponse>().ToList();
+                }
+
+
+                response = new Response<ProyectoResponse>()
+                {
+                    Value = basicResponse
+                };
+
+                
+            }
+            return response;
+        }
+
+
         public IEnumerable<PersonResponse> ListPersonAll(PersonFilterRequest personFilterRequest)
         {
             IEnumerable<PersonResponse> response;
