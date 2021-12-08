@@ -557,5 +557,21 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
             }
             return response;
         }
+        public IEnumerable<PersonalResponse> ListPersonal()
+        {
+            IEnumerable<PersonalResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                var resultResponse = connection.QueryAsync<PersonalResponse>(
+                    $"{IncomeDataProcedures.Schema.Cnfg}.{IncomeDataProcedures.Procedure.ListPersonal}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
     }
 }

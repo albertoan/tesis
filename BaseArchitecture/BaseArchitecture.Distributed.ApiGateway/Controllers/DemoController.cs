@@ -363,5 +363,18 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
                     postData);
             return Ok(result);
         }
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListPersonal)]
+        public IHttpActionResult ListPersonal()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.ListPersonal}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<ProyectoResponse>>>(urlApi, string.Empty);
+            return Ok(result);
+        }
     }
 }

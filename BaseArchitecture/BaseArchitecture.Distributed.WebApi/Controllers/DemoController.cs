@@ -272,5 +272,15 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
             var result = DemoService.RegPersonal(personalRequest);
             return Ok(result);
         }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListPersonal)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult ListPersonal()
+        {
+            var result = DemoService.ListPersonal();
+            return Ok(result);
+        }
     }
 }

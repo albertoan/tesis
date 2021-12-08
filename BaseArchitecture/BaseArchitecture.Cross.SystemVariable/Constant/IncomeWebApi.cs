@@ -37,6 +37,7 @@
             public static class Siscose
             {
                 public const string ListProyectos = "ListProyectos";
+                public const string ListPersonal = "ListPersonal";
                 public const string GetProyectoById = "GetProyectoById";
                 public const string GetListProyectoByIdProyecto = "GetListProyectoByIdProyecto";                
                 public const string ListProyectoCodigo = "ListProyectoCodigo";

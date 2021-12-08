@@ -361,5 +361,15 @@ namespace BaseArchitecture.Application.Service.Demo
             }
             return result;
         }
+        public Response<List<PersonalResponse>> ListPersonal()
+        {
+            var result = DemoQuery.ListPersonal().ToList();
+
+            var response = new Response<List<PersonalResponse>>()
+            {
+                Value = result
+            };
+            return response;
+        }
     }
 }

@@ -34,6 +34,7 @@
             
             public const string GetProyectoById = "USP_GET_ProyectoById";
             public const string ListProyectos = "USP_LIST_Proyectos";
+            public const string ListPersonal = "USP_LIST_Personal";
             public const string ListProyectoCodigo = "USP_LIST_ProyectosCodigo";
             public const string ListProyectoByIdProyecto= "USP_LIST_ProyectosbyIdProyecto";
             public const string ListUbigeo = "USP_LIST_Ubigeo";
