@@ -27,6 +27,7 @@ export const Siscose = {
   RegCronograma: 'RegCronograma',
   ListMenu: 'ListMenu',
   ListProyectosRpt: 'ListProyectosRpt',
+  RegInformeCoordinador: 'RegInformeCoordinador',
 };
 
 export const KeyObjectSoreName = {

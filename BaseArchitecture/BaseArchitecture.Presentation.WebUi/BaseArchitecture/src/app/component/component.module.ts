@@ -11,6 +11,7 @@ import { TableComponent } from './table/table.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { MenuOptionComponent } from './menu/option/option.component';
+import { FileListComponent } from './file-list/file-list.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { MenuOptionComponent } from './menu/option/option.component';
     MenuLeftComponent,
     UserInfoComponent,
     TableComponent,
+    FileListComponent
   ],
   exports: [
     MenuResponsiveComponent,
@@ -39,6 +41,7 @@ import { MenuOptionComponent } from './menu/option/option.component';
     MenuLeftComponent,
     UserInfoComponent,
     TableComponent,
+    FileListComponent
   ],
   entryComponents: [],
   providers: [],

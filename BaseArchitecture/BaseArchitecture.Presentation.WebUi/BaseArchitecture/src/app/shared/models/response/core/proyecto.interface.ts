@@ -74,6 +74,8 @@ export class Insumos {
 	Cableado: string;
   	TipoRegistro: string;
 	TipoObra: string;
+	Actividades?: Actividades[];
+	Evidencia?: Evidencia;
 }
 
 export class ProyectoId {
@@ -116,6 +118,7 @@ export class Evidencia {
 
 export class AttachedFileRequest
 {
+  IdProyecto: string;
   IdAttachedFile: string;
   Name: string;
   PathFile: string;  

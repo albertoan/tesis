@@ -15,6 +15,7 @@ namespace BaseArchitecture.Application.TransferObject.Response.Demo
 		public string FechaInicio { set; get; }
 		public string FechaFin { set; get; }
 		public string Seguimiento { set; get; }
+		public string Comentario { set; get; }
 		public string Estado { set; get; }
 	}
 }

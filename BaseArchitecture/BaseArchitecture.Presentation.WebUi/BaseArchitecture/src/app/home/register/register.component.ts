@@ -11,8 +11,11 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { DBName, KeyObjectSoreName, ObjectStoreName } from 'src/app/shared/constant';
 import { Evidencia, Insumos } from 'src/app/shared/models/response/core/proyecto.interface';
 import { environment } from '../../../environments/environment.prod';
-import { createGuidRandom } from '../../shared/util';
+import { createGuidRandom, dataURLtoFile, SetError } from '../../shared/util';
 import { AttachedFileRequest } from '../../shared/models/response/core/proyecto.interface';
+import { ToastrService } from 'ngx-toastr';
+
+declare var fileS3: any
 
 @Component({
   selector: 'app-register',
@@ -26,21 +29,26 @@ export class RegisterComponent implements OnInit {
   listEmployee: any [] = [];
   itemCode: string;
   itemType: string;
+  idProyecto: string;
   listProyectosCode: any [] = [];
   proyectoInsumos = new Insumos();
+  proyectoInsumosRequest = new Insumos();
   listProyectosOriginalCode: any [] = [];
   listProyectosCronograma: any [] = [];
+  listProyectosCronogramaOriginal: any [] = [];
   @ViewChild('inputFile') inputFile: ElementRef;
   answerActionRequest: Evidencia = new Evidencia();
 
   listaTemporal: any [] = [];
+  viewCommentary: boolean;
 
   constructor(
     private spinner: NgxSpinnerService,
     private router: Router,
     private localStorage: LocalService,
     private oIndexdDBService: IndexdDBService,
-    private serviceProyecto: GeneralService
+    private serviceProyecto: GeneralService,
+    private toastr: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -49,11 +57,20 @@ export class RegisterComponent implements OnInit {
     this.loadProyectos();
   }
 
+  view = (value) => {
+      debugger
+      if( value == 2 ) this.viewCommentary = true;
+      else this.viewCommentary = false;
+  }
+
   typeaheadOnSelectEmployee = (e: TypeaheadMatch): void => {
+    debugger
     this.itemCode = e.value;
     this.itemType = e.item.TipoObra;
+    this.idProyecto = e.item.IdProyecto;
     this.listProyectosCode = this.listProyectosOriginalCode.filter(x => x.Codigo == this.itemCode);
     this.proyectoInsumos = this.listProyectosCode[0];
+    this.listProyectosCronograma = this.listProyectosCronogramaOriginal.filter(x => x.Idproyecto == this.idProyecto);
   };
 
   loadProyectos = () => { 
@@ -73,7 +90,50 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  registerInformation = () => { 
+    console.log(this.listProyectosCronograma)
+
+
+    this.proyectoInsumosRequest.Actividades
+
+
+    this.serviceProyecto.RegInformeCoordinador(this.proyectoInsumosRequest).subscribe(
+      (data: any) => {
+          debugger
+          this.toastr.success("Se registro correctamente")
+         
+      },
+      (error: HttpErrorResponse) => {
+        showError("Ocurrió un error, verificar log");
+        this.spinner.hide();
+      }
+    );
+
+
+    this.answerActionRequest.AttachedFile.forEach((element) => {
+
+      var params = fileS3.ParamsBucket(
+        environment.bucketSite,
+        element.PathFile,
+        dataURLtoFile(element.FileBase64, element.Name)
+      );
+
+      fileS3.UploadS3(params, (err, data) => {
+        if (err) {
+          this.toastr.error('Credenciales expirada, cerrando sesión');
+          console.log(err);
+          SetError();
+          // SignOff();
+          return false;
+        } else return true;
+      });
+   
+});
+
+  }
+
   loadCronograma = () => { 
+    debugger
     this.oIndexdDBService
     .fetchData(
       DBName.siscose,
@@ -83,7 +143,7 @@ export class RegisterComponent implements OnInit {
     .then((resp: any) => {
       debugger
       let body: any [] = JSON.parse(decrypt(resp.body));
-      this.listProyectosCronograma = body;
+      this.listProyectosCronogramaOriginal = body;
       this.spinner.hide();
     })
     .catch(() => {
@@ -107,10 +167,13 @@ export class RegisterComponent implements OnInit {
 
       _this.answerActionRequest.AttachedFile.push(
         {
+            IdProyecto: _this.idProyecto,
             IdAttachedFile: IdAttachedFile,
             Name: file.name,
-            PathFile:  environment.Bucket.concat(
+            PathFile:  environment.bucket.concat(
                       '/',
+                      IdAttachedFile
+                      ,'/',
                       file.name    
                     ),
             FileBase64: reader.result,
@@ -119,6 +182,9 @@ export class RegisterComponent implements OnInit {
       );
      _this.inputFile.nativeElement.value = '';
     };
+
+    this.answerActionRequest.AttachedFile = _this.answerActionRequest.AttachedFile;
+
   };
 
 

@@ -57,3 +57,17 @@ C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.Transfer
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CoreCompileInputs.cache
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.dll
 C:\Minem\Minem\ANTA-90000\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Repository.Entity.dll
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\EPPlus.dll
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\Newtonsoft.Json.dll
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\EPPlus.xml
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\Newtonsoft.Json.xml
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.AssemblyReference.cache
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CoreCompileInputs.cache
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.dll
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.pdb

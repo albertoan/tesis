@@ -12,5 +12,6 @@ export const environment = {
   CLIENT_ID: '37es1gmfoo533883vj1iamkp2c',
   CLIENT_ID_AZURE_AD: '37es1gmfoo533883vj1iamkp2c',
   URL_LOGIN: 'https://dev.antamina.com/ProyectoBase/login',
-  Bucket: 'minem',
+  bucket: 'evidencia',
+  bucketSite: 'minem',
 };

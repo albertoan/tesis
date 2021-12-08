@@ -41,6 +41,16 @@ export function Base64toBlob(base64Data, contentType): Blob {
   return new Blob(byteArrays, { type: contentType });
 }
 
+export async function DownloadFileS3(PathFile: string, NameFile: string) {
+  let blob = await fetch(PathFile).then((r) => r.blob());
+  const a = document.createElement('a');
+  const objectUrl = URL.createObjectURL(blob);
+  a.href = objectUrl;
+  a.download = NameFile;
+  a.click();
+  URL.revokeObjectURL(objectUrl);
+}
+
 export function SignOff(): void {
   if (localStorage.getItem('errorBaseArchitecture')) {
     if (Number(localStorage.getItem('errorBaseArchitecture')) > 0) {
@@ -59,6 +69,31 @@ export function SignOff(): void {
     'toolbar=no,status=no,menubar=no,scrollbars=no,resizable=no,left=10000, top=10000, width=10, height=10, visible=none'
   );
   Sleep(win);
+}
+
+export function dataURLtoFile(dataurl, filename) {
+ 
+  var arr = dataurl.split(','),
+      mime = arr[0].match(/:(.*?);/)[1],
+      bstr = atob(arr[1]), 
+      n = bstr.length, 
+      u8arr = new Uint8Array(n);
+      
+  while(n--){
+      u8arr[n] = bstr.charCodeAt(n);
+  }
+  
+  return new File([u8arr], filename, {type:mime});
+}
+
+export function SetError() {
+  let iError = 0;
+  if (localStorage.getItem('errorBaseArchitecture')) {
+    iError = Number(localStorage.getItem('errorBaseArchitecture'));
+    localStorage.setItem('errorBaseArchitecture', JSON.stringify(iError++));
+  } else {
+    localStorage.setItem('errorBaseArchitecture', JSON.stringify(0));
+  }
 }
 
 export function Sleep(win: any): void {

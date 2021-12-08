@@ -18,7 +18,7 @@ export const environment = {
   awsClientSecret: 'kg4a89464581ta60e7n8fr8hgh7plp31k7hqqlm9t6itgtjjnja',
   awsIdentityPool: 'us-east-1:c6e71b26-6b54-4240-805b-a4f757c13e68',
   urlLogin: 'http://localhost:64238/ProyectoBase/login',  
-  BucketSite:'antamina-site-dev/',
+  BucketSite:'minem-site-dev/',
   Bucket: 'minem',
   size: 8,
   lastKeyEncrypt : "4NT4D1G1",

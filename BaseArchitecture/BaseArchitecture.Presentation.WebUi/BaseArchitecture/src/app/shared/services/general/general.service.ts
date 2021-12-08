@@ -8,7 +8,7 @@ import { AutorizacionService } from './autorizacion.service';
 import { LoginRequest } from '../../models/request/authentication/authentication-request.interface';
 import { LoginResponse } from '../../models/response/authentication/authentication-response.interface';
 import { AccessResponse } from '../../models/response/authentication/authentication-response.interface';
-import { Proyecto, Programacion, ProyectoId, ProyectoActividades } from '../../models/response/core/proyecto.interface';
+import { Proyecto, Programacion, ProyectoId, ProyectoActividades, Insumos } from '../../models/response/core/proyecto.interface';
 
 @Injectable({ providedIn: 'root' })
 export class GeneralService {
@@ -105,6 +105,15 @@ export class GeneralService {
       .post<any>(
         this.urlWebApi + Path.Siscose + Siscose.RegProyecto,
         proyecto
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
+  RegInformeCoordinador(proyectoInsumosRequest: Insumos): Observable<any> {
+    return this.http
+      .post<any>(
+        this.urlWebApi + Path.Siscose + Siscose.RegInformeCoordinador,
+        proyectoInsumosRequest
       )
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   }
