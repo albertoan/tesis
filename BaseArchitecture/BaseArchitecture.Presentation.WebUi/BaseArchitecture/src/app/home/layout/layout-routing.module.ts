@@ -24,6 +24,23 @@ const routes: Routes = [
           canActivate: [AuthGuard],
       },
       {
+        path: 'personal',
+        loadChildren: () =>
+          import('src/app/home/personal/personal.module').then(
+            (m) => m.PersonalModule
+          ),
+          canActivate: [AuthGuard],
+      },
+      {
+        path: 'personal/register',
+        loadChildren: () =>
+          import('src/app/home/personal/register-personal/register-personal.module').then(
+            (m) => m.RegisterPersonalModule
+          ),
+      },
+      
+
+      {
         path: 'programar',
         loadChildren: () =>
           import('src/app/home/programar/programar.module').then(
