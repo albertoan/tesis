@@ -116,13 +116,13 @@ export class PersonalComponent implements OnInit {
   }
 
   exportExcel = () => {
-    this.serviceProyecto.ListProyectosRpt().subscribe(
+    this.serviceProyecto.ListPersonalRpt().subscribe(
       (data : any) => {
         let blob = Base64toBlob(data.Value, MediaType.ExcelContentType);
         const link = document.createElement('a');
         const objectUrl = URL.createObjectURL(blob);
         link.href = objectUrl;
-        link.download = FileNameExcel.ListProjectExcel;
+        link.download = FileNameExcel.ListPersonalExcel;
         link.click();
         URL.revokeObjectURL(objectUrl);
         this.spinner.hide();

@@ -201,4 +201,16 @@ export class GeneralService {
       )
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   };
+
+  ListPersonalRpt = (): Observable<any> => {
+    return this.http
+      .get<any>(
+        environment.serverUriApi +  Path.Siscose + Siscose.ListPersonalRpt,
+        {
+          observe: 'body',
+        }
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  };
+   
 }

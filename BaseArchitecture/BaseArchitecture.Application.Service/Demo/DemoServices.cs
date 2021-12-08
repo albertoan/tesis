@@ -371,5 +371,35 @@ namespace BaseArchitecture.Application.Service.Demo
             };
             return response;
         }
+
+
+
+
+        public Response<byte[]> ListPersonalRpt()
+        {
+            var result = DemoQuery.ListPersonal().ToList();
+
+            string[] columns = {
+                 "Nombre"
+                ,"ApellidoPaterno"
+                ,"ApellidoMaterno"
+                ,"Correo"
+                ,"Telefono"
+                ,"EstadoDes"
+                ,"ZonaDes"
+                ,"AsignadoDes"
+                ,"CargoDes"
+            };
+
+            var listBytes = Util.ExcelExportHelper.ExportExcel(result, string.Empty, true, columns);
+
+            var response = new Response<byte[]>()
+            {
+                Value = listBytes
+            };
+
+            return response;
+
+        }
     }
 }

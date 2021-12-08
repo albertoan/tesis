@@ -30,6 +30,7 @@ export const Siscose = {
   RegCronograma: 'RegCronograma',
   ListMenu: 'ListMenu',
   ListProyectosRpt: 'ListProyectosRpt',
+  ListPersonalRpt:'ListPersonalRpt',
   RegInformeCoordinador: 'RegInformeCoordinador',
 };
 
@@ -51,6 +52,7 @@ export const MediaType = {
 
 export const FileNameExcel = {
   ListProjectExcel: 'ListProyectos.xlsx',
+  ListPersonalExcel: 'ListPersonal.xlsx',
 };
 
 export const DBName = {

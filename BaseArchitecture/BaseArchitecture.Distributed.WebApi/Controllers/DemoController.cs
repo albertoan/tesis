@@ -214,6 +214,16 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
         }
 
         [HttpPost]
+        [RequestLoggerFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListPersonalRpt)]
+        public IHttpActionResult ListPersonalRpt()
+        {
+            var answerActionPendingsExcel = DemoService.ListPersonalRpt();
+            return Ok(answerActionPendingsExcel);
+        }
+
+
+        [HttpPost]
         [Route(IncomeWebApi.MethodApi.Siscose.RptCantidadPoblacionPorDepartamento)]
         [RequestLoggerFilterAttribute]
         [UnControlledExceptionFilterAttribute]

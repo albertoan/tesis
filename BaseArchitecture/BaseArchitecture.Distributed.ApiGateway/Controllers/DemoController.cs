@@ -137,6 +137,17 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
         }
 
         [HttpGet]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListPersonalRpt)]
+        public IHttpActionResult ListPersonalRpt()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.ListPersonalRpt}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<byte[]>>(urlApi, string.Empty);
+            return Ok(result);
+        }
+
+        [HttpGet]
         [RequestLoggerFilterAttribute]
         [UnControlledExceptionFilterAttribute]
         [Route(IncomeWebApi.MethodApi.Siscose.GetProyectoById)]
