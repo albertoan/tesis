@@ -28,8 +28,12 @@ namespace BaseArchitecture.Application.TransferObject.Response.Demo
 		public int Asignado { set; get; }
 		public string FechaVisita { set; get; }
 		public string NombresCompleto { set; get; }
+		public string IdTipoProyecto { set; get; }
+		public string FechaDesde { set; get; }
+		public string FechaHasta { set; get; }
 		public List<ProyectoActividadesResponse> ProyectoActividadesResponse { set; get; }
 		public List<InsumosResponse> ListInsumosResponse { set; get; }
-		
+		public List<CronogramaResponse> ListCronogramaResponse { set; get; }
+
 	}
 }

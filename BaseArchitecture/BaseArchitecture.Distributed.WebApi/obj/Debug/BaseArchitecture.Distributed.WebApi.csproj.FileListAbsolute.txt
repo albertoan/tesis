@@ -469,6 +469,5 @@ C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Distributed.Web
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Distributed.WebApi\bin\Castle.Core.xml
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Distributed.WebApi\obj\Debug\BaseArchitecture.Distributed.WebApi.csproj.AssemblyReference.cache
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Distributed.WebApi\obj\Debug\BaseArchitecture.Distributed.WebApi.csproj.CoreCompileInputs.cache
-C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Distributed.WebApi\obj\Debug\BaseArchitecture.Distributed.WebApi.csproj.CopyComplete
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Distributed.WebApi\obj\Debug\BaseArchitecture.Distributed.WebApi.dll
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Distributed.WebApi\obj\Debug\BaseArchitecture.Distributed.WebApi.pdb

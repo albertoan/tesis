@@ -69,6 +69,5 @@ C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Tra
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\bin\Debug\Newtonsoft.Json.xml
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.AssemblyReference.cache
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CoreCompileInputs.cache
-C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CopyComplete
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.dll
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.pdb

@@ -274,6 +274,6 @@ C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Ser
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Service\bin\Debug\System.Web.Http.Cors.xml
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Service\obj\Debug\BaseArchitecture.Application.Service.csproj.AssemblyReference.cache
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Service\obj\Debug\BaseArchitecture.Application.Service.csproj.CoreCompileInputs.cache
-C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Service\obj\Debug\BaseArchitecture.Application.Service.csproj.CopyComplete
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Service\obj\Debug\BaseArchitecture.Application.Service.dll
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Service\obj\Debug\BaseArchitecture.Application.Service.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Application.Service\obj\Debug\BaseArchitecture.Application.Service.csproj.CopyComplete

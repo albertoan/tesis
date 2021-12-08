@@ -5,7 +5,7 @@ import { ResponseLabel } from 'src/app/shared/models/general/label.interface';
 import { LocalService } from 'src/app/shared/services/general/local.service';
 import { GeneralService } from 'src/app/shared/services/general/general.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Insumos, Proyecto } from 'src/app/shared/models/response/core/proyecto.interface';
+import { Insumos, Proyecto, ProyectoId } from 'src/app/shared/models/response/core/proyecto.interface';
 import { ToastrService } from 'ngx-toastr';
 import { showError } from 'src/app/shared/util';
 import { DatePipe } from '@angular/common';
@@ -19,7 +19,7 @@ import { ProyectoActividades } from '../../../shared/models/response/core/proyec
 export class EditProyectoComponent implements OnInit {
 
     public labelJson: ResponseLabel = new ResponseLabel();
-    proyecto = new Proyecto();
+    //proyecto = new Proyecto();
     insumos = new Insumos();
     proyectoResponse = new Proyecto();
     listGeneral: any [] = [];
@@ -45,6 +45,7 @@ export class EditProyectoComponent implements OnInit {
     contador: number;
     itemCodigo: string;
     idProyecto: string;
+    proyectoItemRequest = new ProyectoId();
 
     constructor(
       private spinner: NgxSpinnerService,
@@ -57,17 +58,43 @@ export class EditProyectoComponent implements OnInit {
   
     ngOnInit(): void {
         this.spinner.show();
-        this.proyecto.Transferencia = "NO";
-        this.proyecto.IdTipoInversion = "";
-        this.proyecto.IdCicloInversion = "";
-        this.proyecto.IdNaturaleza = "";
-        this.proyecto.IdModalidad = "";
-        this.proyecto.IdDepartamento = "";
-        this.proyecto.IdProvincia = "";
-        this.proyecto.IdDistrito = "";
-        this.proyecto.IdZona = "";
-        this.proyecto.IdTipoProyecto = "";
+        // this.proyecto.Transferencia = "NO";
+        // this.proyecto.IdTipoInversion = "";
+        // this.proyecto.IdCicloInversion = "";
+        // this.proyecto.IdNaturaleza = "";
+        // this.proyecto.IdModalidad = "";
+        // this.proyecto.IdDepartamento = "";
+        // this.proyecto.IdProvincia = "";
+        // this.proyecto.IdDistrito = "";
+        // this.proyecto.IdZona = "";
+        // this.proyecto.IdTipoProyecto = "";
         this.loadMaster();
+        
+    }
+
+    loadEditItem = () => {
+      var editItem = this.localStorage.getJsonValue('EditRequestProyecto');
+
+      this.proyectoItemRequest.IdProyecto = editItem.IdProyecto;
+
+      this.serviceProyecto.GetListProyectoByIdProyecto(this.proyectoItemRequest).subscribe(
+        (data: any) => {
+          debugger
+          this.proyectoResponse = data.Value;
+          this.insumos = data.Value.ListInsumosResponse[0];
+          this.listSchedules = data.Value.ListCronogramaResponse;
+          this.SinceDate= this.proyectoResponse.FechaDesde;//(new Date(this.proyectoResponse.FechaDesde +' 05:00:00')).toString();
+          this.UntilDate= this.proyectoResponse.FechaHasta;//(new Date(this.proyectoResponse.FechaHasta +' 05:00:00')).toString();
+          //this.listSchedules = 
+          this.loadProvincia(this.proyectoResponse.IdDepartamento);
+          this.loadDistrito(this.proyectoResponse.IdProvincia);    
+          this.selectTipoProyecto(this.proyectoResponse.IdTipoProyecto);    
+          this.spinner.hide();
+        },
+        (error: HttpErrorResponse) => {
+          this.spinner.hide();
+        }
+      );
     }
 
     loadMaster = () => {
@@ -92,7 +119,8 @@ export class EditProyectoComponent implements OnInit {
           this.listDepartamentoResponse = data.Value.ListDepartamentoResponse;
           this.listProvinciaResponseOriginal = data.Value.ListProvinciaResponse;
           this.listDistritoResponseOriginal = data.Value.ListDistritoResponse;
-          this.spinner.hide();
+          this.loadEditItem();
+                    
         },
         (error: HttpErrorResponse) => {
           this.spinner.hide();
@@ -157,57 +185,57 @@ export class EditProyectoComponent implements OnInit {
 
     registerProject = () => {
 
-      if( this.proyecto.Codigo == "" || this.proyecto.Codigo == undefined ){
+      if( this.proyectoResponse.Codigo == "" || this.proyectoResponse.Codigo == undefined ){
         this.toastr.info("Ingrese el Código")
         return
       }
 
-      else if( this.proyecto.Nombre == "" || this.proyecto.Nombre == undefined ){
+      else if( this.proyectoResponse.Nombre == "" || this.proyectoResponse.Nombre == undefined ){
         this.toastr.info("Ingrese el Nombre del proyecto")
         return
       }
 
-      else if( this.proyecto.Transferencia == "" || this.proyecto.Transferencia == undefined ){
+      else if( this.proyectoResponse.Transferencia == "" || this.proyectoResponse.Transferencia == undefined ){
         this.toastr.info("Seleccione una transferencia")
         return
       }
 
-      else if( this.proyecto.IdTipoInversion == "" || this.proyecto.IdTipoInversion == undefined ){
+      else if( this.proyectoResponse.IdTipoInversion == "" || this.proyectoResponse.IdTipoInversion == undefined ){
         this.toastr.info("Seleccione un tipo de Inversion")
         return
       }
 
-      else if( this.proyecto.IdCicloInversion == "" || this.proyecto.IdCicloInversion == undefined ){
+      else if( this.proyectoResponse.IdCicloInversion == "" || this.proyectoResponse.IdCicloInversion == undefined ){
         this.toastr.info("Seleccione un Ciclo de Inversion")
         return
       }
     
-      else if( this.proyecto.IdNaturaleza == "" || this.proyecto.IdNaturaleza == undefined ){
+      else if( this.proyectoResponse.IdNaturaleza == "" || this.proyectoResponse.IdNaturaleza == undefined ){
         this.toastr.info("Seleccione un tipo de Naturaleza")
         return
       }
 
-      else if( this.proyecto.IdModalidad == "" || this.proyecto.IdModalidad == undefined ){
+      else if( this.proyectoResponse.IdModalidad == "" || this.proyectoResponse.IdModalidad == undefined ){
         this.toastr.info("Seleccione una Modalidad")
         return
       }
 
-      else if( this.proyecto.IdDepartamento == "" || this.proyecto.IdDepartamento == undefined ){
+      else if( this.proyectoResponse.IdDepartamento == "" || this.proyectoResponse.IdDepartamento == undefined ){
         this.toastr.info("Seleccione un Departamento")
         return
       }
 
-      else if( this.proyecto.IdProvincia == "" || this.proyecto.IdProvincia == undefined ){
+      else if( this.proyectoResponse.IdProvincia == "" || this.proyectoResponse.IdProvincia == undefined ){
         this.toastr.info("Seleccione una Provincia")
         return
       }
 
-      else if( this.proyecto.Programa == "" || this.proyecto.Programa == undefined ){
+      else if( this.proyectoResponse.Programa == "" || this.proyectoResponse.Programa == undefined ){
         this.toastr.info("Ingrese un Programa")
         return
       }
 
-      else if( this.proyecto.IdZona == "" || this.proyecto.IdZona == undefined ){
+      else if( this.proyectoResponse.IdZona == "" || this.proyectoResponse.IdZona == undefined ){
         this.toastr.info("Seleccione una Zona")
         return
       }
@@ -222,25 +250,34 @@ export class EditProyectoComponent implements OnInit {
         return
       }
 
-      else if( this.proyecto.IdTipoProyecto == "" || this.proyecto.IdTipoProyecto == undefined ){
+      else if( this.proyectoResponse.IdTipoProyecto == "" || this.proyectoResponse.IdTipoProyecto == undefined ){
         this.toastr.info("Seleccione un tipo de proyecto")
         return
       }
 
-      else if( this.proyecto.Costo == "" || this.proyecto.Costo == undefined ){
+      else if( this.proyectoResponse.Costo == "" || this.proyectoResponse.Costo == undefined ){
         this.toastr.info("Ingrese el costo")
         return
       }
 
-      this.proyecto.Estado = "1";
-      this.proyecto.Insumos = this.insumos;
-      this.proyecto.Insumos.TipoRegistro = "1";
-      this.proyecto.Insumos.TipoObra = this.tipoProyecto;
-      this.proyecto.ProyectoActividadesRequest = this.listSchedules;
+      debugger
+      this.proyectoResponse.FechaDesde = this.SinceDate != this.proyectoResponse.FechaDesde ? this.datepipe.transform(this.SinceDate, 'dd/MM/yyyy'):this.SinceDate ;
+      this.proyectoResponse.FechaHasta = this.UntilDate != this.proyectoResponse.FechaHasta ? this.datepipe.transform(this.UntilDate, 'dd/MM/yyyy'):this.UntilDate ;
+      this.proyectoResponse.Estado = "1";
+      this.proyectoResponse.Insumos = this.insumos;
+      this.proyectoResponse.Insumos.TipoRegistro = "1";
+      this.proyectoResponse.Insumos.TipoObra = this.tipoProyecto;
+      this.listSchedules.forEach(element => {
+        
+        element.FechaInicio = element.FechaInicio.toString().indexOf("GMT") >= 1 ? this.datepipe.transform(element.FechaInicio, 'dd/MM/yyyy'):element.FechaInicio ;
+        element.FechaFin = element.FechaFin.toString().indexOf("GMT") >= 1 ? this.datepipe.transform(element.FechaFin, 'dd/MM/yyyy'):element.FechaFin ;
+      });
+
+      this.proyectoResponse.ProyectoActividadesRequest = this.listSchedules;
       if(this.insumos.Alumbrado)  this.insumos.Alumbrado = "1"; else this.insumos.Alumbrado = "0";
       if(this.insumos.Retenidas) this.insumos.Retenidas = "1"; else this.insumos.Retenidas = "0"
       if(this.insumos.PuestaTierra) this.insumos.PuestaTierra = "1"; else this.insumos.PuestaTierra = "0"
-      this.serviceProyecto.RegProyecto(this.proyecto).subscribe(
+      this.serviceProyecto.RegProyecto(this.proyectoResponse).subscribe(
         (data: any) => {
             this.toastr.success("Se registro correctamente")
             this.router.navigate(['cartera']);

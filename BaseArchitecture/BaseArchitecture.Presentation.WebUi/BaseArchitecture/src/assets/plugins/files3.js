@@ -3,8 +3,7 @@ var fileS3 = {
     options: {
         bucket: ""
     },
-    ParamS3: function (params) {
-        debugger
+    ParamS3: function (params) {       
         this.options.bucket = new AWS.S3({
             accessKeyId:
                 params.AwsAccessKey,

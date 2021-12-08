@@ -21,6 +21,8 @@ namespace BaseArchitecture.Application.TransferObject.Request.Demo
         public int IdZona { set; get; }
         public int Asignado { set; get; }
         public int IdTipoProyecto { set; get; }
+        public string FechaDesde { set; get; }
+        public string FechaHasta { set; get; }
         public InsumosRequest Insumos { set; get; }
         public List<ProyectoActividadesRequest> ProyectoActividadesRequest { set; get; }
     }

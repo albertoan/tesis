@@ -120,7 +120,7 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
             using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
             {
                 var parameters = new DynamicParameters();
-                parameters.Add("@IdProyecto", proyectoRequest.IdProyecto);
+                parameters.Add("@ParamIIdProyecto", proyectoRequest.IdProyecto);
 
 
                 var basicResponse = new ProyectoResponse();
@@ -131,6 +131,7 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
                 {
                     basicResponse = list.Read<ProyectoResponse>().ToList().FirstOrDefault();
                     basicResponse.ListInsumosResponse = list.Read<InsumosResponse>().ToList();
+                    basicResponse.ListCronogramaResponse = list.Read<CronogramaResponse>().ToList();
                 }
 
 
@@ -326,6 +327,8 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
                 parameters.Add("@IdZona", proyectoRequest.IdZona);
                 parameters.Add("@Asignado", proyectoRequest.Asignado);
                 parameters.Add("@IdTipoProyecto", proyectoRequest.IdTipoProyecto);
+                parameters.Add("@FechaDesde", proyectoRequest.FechaDesde);
+                parameters.Add("@FechaHasta", proyectoRequest.FechaHasta);
 
                 var result = connection.QueryAsync<int>(
                     $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RegProyecto}",

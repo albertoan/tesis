@@ -100,6 +100,6 @@ C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\bin\Debug\EPPlus.xml
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.csproj.AssemblyReference.cache
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.csproj.CoreCompileInputs.cache
-C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.csproj.CopyComplete
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.dll
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.pdb
+C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Data\obj\Debug\BaseArchitecture.Repository.Data.csproj.CopyComplete

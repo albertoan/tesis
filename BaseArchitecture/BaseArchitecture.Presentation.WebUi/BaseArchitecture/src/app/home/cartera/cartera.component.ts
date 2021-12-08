@@ -126,7 +126,7 @@ export class CarteraComponent implements OnInit {
     editDetail = (item) => {
       debugger
       
-      this.localStorage.setJsonValue('RequestProyecto', item);
+      this.localStorage.setJsonValue('EditRequestProyecto', item);
       if (item != null && item != '') {
         this.router.navigate(['cartera/edit']);
       } else return;

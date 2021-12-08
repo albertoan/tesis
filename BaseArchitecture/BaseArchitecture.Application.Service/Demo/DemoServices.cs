@@ -149,6 +149,7 @@ namespace BaseArchitecture.Application.Service.Demo
                 catch (Exception e)
                 {
                     //result = 99;
+                    
                 }
             }
 

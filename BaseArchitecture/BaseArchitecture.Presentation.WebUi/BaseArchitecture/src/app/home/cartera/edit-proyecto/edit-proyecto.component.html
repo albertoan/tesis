@@ -18,7 +18,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <input type="text" class="form-control" [(ngModel)]="proyecto.Codigo"/>
+                <input type="text" class="form-control" [(ngModel)]="proyectoResponse.Codigo"/>
             </div>
     
         </div>
@@ -30,7 +30,7 @@
                 </label>
             </div>
             <div class="col-md-10">
-                <input type="text" class="form-control" [(ngModel)]="proyecto.Nombre"/>
+                <input type="text" class="form-control" [(ngModel)]="proyectoResponse.Nombre"/>
             </div>
         </div>
         <br>
@@ -41,7 +41,7 @@
                 </label>
             </div>
             <div class="col-md-1">
-                <select [(ngModel)]="proyecto.Transferencia" class="form-control">
+                <select [(ngModel)]="proyectoResponse.Transferencia" class="form-control">
                     <option value="NO">NO</option>
                     <option value="SI">SI</option>
                 </select>
@@ -52,7 +52,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdTipoInversion"  class="form-control">
+                <select [(ngModel)]="proyectoResponse.IdTipoInversion"  class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="{{item.Id}}" *ngFor="let item of listInversion">{{ item.Descripcion1 }}</option>
                 </select>
@@ -63,7 +63,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdCicloInversion"  class="form-control">
+                <select [(ngModel)]="proyectoResponse.IdCicloInversion"  class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="{{item.Id}}" *ngFor="let item of listCiclo">{{ item.Descripcion1 }}</option>
                 </select>
@@ -74,7 +74,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdNaturaleza" class="form-control">
+                <select [(ngModel)]="proyectoResponse.IdNaturaleza" class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="{{item.Id}}" *ngFor="let item of listNaturaleza">{{ item.Descripcion1 }}</option>
                 </select>
@@ -88,7 +88,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdModalidad"  class="form-control">
+                <select [(ngModel)]="proyectoResponse.IdModalidad"  class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="{{item.Id}}" *ngFor="let item of listModalidad">{{ item.Descripcion1 }}</option>
                 </select>
@@ -99,7 +99,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdDepartamento" (change)="loadProvincia($event.target.value)" class="form-control">
+                <select [(ngModel)]="proyectoResponse.IdDepartamento" (change)="loadProvincia($event.target.value)" class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="{{item.IdDepartamento}}" *ngFor="let item of listDepartamentoResponse">{{ item.Departamento }}</option>
                 </select>
@@ -110,7 +110,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdProvincia" (change)="loadDistrito($event.target.value)" class="form-control">
+                <select [(ngModel)]="proyectoResponse.IdProvincia" (change)="loadDistrito($event.target.value)" class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="{{item.IdProvincia}}" *ngFor="let item of listProvinciaResponse">{{ item.Provincia }}</option>
                 </select>
@@ -124,7 +124,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdDistrito" class="form-control">
+                <select [(ngModel)]="proyectoResponse.IdDistrito" class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="{{item.IdDistrito}}" *ngFor="let item of listDistritoResponse">{{ item.Distrito }}</option>
                 </select>
@@ -135,7 +135,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <input type="text" class="form-control" [(ngModel)]="proyecto.Programa"/>
+                <input type="text" class="form-control" [(ngModel)]="proyectoResponse.Programa"/>
             </div>
             <div class="col-md-2">
                 <label style="font-weight: bold;">
@@ -143,7 +143,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdZona" class="form-control">
+                <select [(ngModel)]="proyectoResponse.IdZona" class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="1">CENTRO</option>
                     <option value="2">NORESTE</option>
@@ -160,7 +160,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <select [(ngModel)]="proyecto.IdTipoProyecto" class="form-control" (change)="selectTipoProyecto($event.target.value)">
+                <select [(ngModel)]="proyectoResponse.IdTipoProyecto" class="form-control" (change)="selectTipoProyecto($event.target.value)">
                     <option value="">-- Seleccione --</option>
                     <option value="1">Primario</option>
                     <option value="2">Secundario</option>
@@ -211,7 +211,7 @@
                 </label>
             </div>
             <div class="col-md-2">
-                <input type="text" class="form-control" [(ngModel)]="proyecto.Costo"/>
+                <input type="text" class="form-control" [(ngModel)]="proyectoResponse.Costo"/>
             </div>
         </div>
     </div>

@@ -49,6 +49,5 @@ C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVar
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\Newtonsoft.Json.xml
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.AssemblyReference.cache
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.CoreCompileInputs.cache
-C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.CopyComplete
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.dll
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.pdb
