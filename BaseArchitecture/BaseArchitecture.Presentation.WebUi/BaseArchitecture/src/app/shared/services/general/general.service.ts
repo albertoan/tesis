@@ -47,6 +47,16 @@ export class GeneralService {
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   }
 
+  
+  ListPersonal(): Observable<any> {
+    return this.http
+      .get<any>(
+        this.urlWebApi + Path.Siscose + Siscose.ListPersonal
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+  
+
   ListMaster(): Observable<any> {
     return this.http
       .get<any>(

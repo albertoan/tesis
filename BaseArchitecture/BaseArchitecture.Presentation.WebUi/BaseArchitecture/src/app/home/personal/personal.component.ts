@@ -23,7 +23,7 @@ export class PersonalComponent implements OnInit {
     itemType: string;
     totalItems: number;
     configTable: {};
-    listProyectos: any[] = [];
+    listPersonal: any[] = [];
     headers: HeadersInterface[] = new Array<HeadersInterface>();
   
     constructor(
@@ -38,14 +38,15 @@ export class PersonalComponent implements OnInit {
       this.createHeadersTable();
       this.loadStart();
       this.deviceType = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) ? 'M':'D';
-      this.ListProyectos();
+      this.ListPersonal();
     }
 
-    ListProyectos = () => {
-      this.serviceProyecto.ListProyectos().subscribe(
+    ListPersonal = () => {
+      this.serviceProyecto.ListPersonal().subscribe(
         (data: any) => {
-          this.listProyectos = data.Value;
-          this.totalItems = this.listProyectos.length;
+          debugger
+          this.listPersonal = data.Value;
+          this.totalItems = this.listPersonal.length;
           this.spinner.hide();
         },
         (error: HttpErrorResponse) => {
@@ -69,66 +70,44 @@ export class PersonalComponent implements OnInit {
     createHeadersTable = () => {
       this.headers = [
         {
-          primaryKey: 'Codigo',
-          title: 'Código',
-        },
-        {
-          primaryKey: 'InversionDescripcion',
-          title: 'Tipo de Inversión',
-        },
-        {
-          primaryKey: 'CicloDescripcion',
-          title: 'Ciclo de Inversión',
-        },
-        {
-          primaryKey: 'NaturalezaDescripcion',
-          title: 'Naturaleza',
-        },
-        {
           primaryKey: 'Nombre',
           title: 'Nombre',
         },
         {
-          primaryKey: 'Departamento',
-          title: 'Departamento',
+          primaryKey: 'ApellidoPaterno',
+          title: 'Apellido Paterno',
         },
         {
-          primaryKey: 'Costo',
-          title: 'Costo',
+          primaryKey: 'ApellidoMaterno',
+          title: 'Apellido Materno',
+        },
+        {
+          primaryKey: 'Correo',
+          title: 'Correo',
         },
         {
           primaryKey: '',
           title: 'Acciones',
           property: 'button',
           buttons: [
-          {
-            type: 'edit',
-            icon: 'fas fa-search',
-            tooltip: 'Consultar'
-        },
-        {
-          type: 'edit2',
-          icon: 'fas fa-pencil-alt',
-          tooltip: 'Editar'
-      }
+            {
+              type: 'edit2',
+              icon: 'fas fa-pencil-alt',
+              tooltip: 'Editar'
+            }
           ]
         }
       ];
     };
 
-    viewDetail = (item) => {
-        this.localStorage.setJsonValue('RequestProyecto', item);
-        if (item != null && item != '') {
-          this.router.navigate(['cartera/detail']);
-        } else return;
-    }
+
 
     editDetail = (item) => {
       debugger
       
-      this.localStorage.setJsonValue('EditRequestProyecto', item);
+      this.localStorage.setJsonValue('EditRequestPersonal', item);
       if (item != null && item != '') {
-        this.router.navigate(['cartera/edit']);
+        this.router.navigate(['personal/register']);
       } else return;
   }
 

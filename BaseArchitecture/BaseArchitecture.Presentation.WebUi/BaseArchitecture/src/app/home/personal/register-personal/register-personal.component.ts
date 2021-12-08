@@ -58,7 +58,7 @@ export class RegisterPersonalComponent implements OnInit {
   
     ngOnInit(): void {
         this.spinner.show();
-        this.personal.IdCoordinador = "";
+        this.personal.IdCoordinador = "0";
         this.personal.Nombre = "";
         this.personal.ApellidoPaterno = "";
         this.personal.ApellidoMaterno = "";
@@ -68,25 +68,14 @@ export class RegisterPersonalComponent implements OnInit {
         this.personal.IdZona = "";
         this.personal.Asignado = "";
         this.personal.Cargo = "";
+        var editRes =this.localStorage.getJsonValue('EditRequestPersonal'); 
+        this.personal = editRes;       
         //this.loadMaster();
         this.spinner.hide();
     }
 
-    loadMaster = () => {
-      this.serviceProyecto.ListMaster().subscribe(
-        (data: any) => {
-          this.listGeneral = data.Value;
-          this.listInversion = this.listGeneral.filter(x => x.IdTipo == '100');
-          this.listCiclo = this.listGeneral.filter(x => x.IdTipo == '200');
-          this.listNaturaleza = this.listGeneral.filter(x => x.IdTipo == '300');
-          this.listModalidad = this.listGeneral.filter(x => x.IdTipo == '400');
-          
-        },
-        (error: HttpErrorResponse) => {
-          this.spinner.hide();
-        }
-      );
-    }
+
+    
 
  
     selectTipoProyecto = (item) => {
@@ -176,11 +165,11 @@ export class RegisterPersonalComponent implements OnInit {
       }
 
       
-
+      debugger
       this.serviceProyecto.RegPersonal(this.personal).subscribe(
         (data: any) => {
             this.toastr.success("Se registro correctamente")
-            this.router.navigate(['cartera']);
+            this.router.navigate(['personal']);
         },
         (error: HttpErrorResponse) => {
           showError("Ocurrió un error, verificar log");

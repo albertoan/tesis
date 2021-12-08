@@ -24,6 +24,7 @@ export const Siscose = {
   ListMaster: 'ListMaster',
   RegProyecto: 'RegProyecto',
   RegPersonal: 'RegPersonal',
+  ListPersonal:'ListPersonal',
   ListProyectoInforme: 'ListProyectoInforme',
   ListProyectoCronograma: 'ListProyectoCronograma',
   RegCronograma: 'RegCronograma',

@@ -357,9 +357,9 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
         {
             var postData = Newtonsoft.Json.JsonConvert.SerializeObject(personalRequest);
             var urlApi =
-                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Demo}/{IncomeWebApi.MethodApi.Demo.RegPersonal}";
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Demo.RegPersonal}";
             var result =
-                InvokeWebApi.InvokePostHeaderEntity<Response<int>>(urlApi, GetHeaderRequest(),
+                InvokeWebApi.InvokePostAnonymousEntity<Response<int>>(urlApi,
                     postData);
             return Ok(result);
         }
@@ -373,7 +373,7 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
             var urlApi =
                 $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.ListPersonal}";
             var result =
-                InvokeWebApi.InvokePostAnonymousEntity<Response<List<ProyectoResponse>>>(urlApi, string.Empty);
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<PersonalResponse>>>(urlApi, string.Empty);
             return Ok(result);
         }
     }

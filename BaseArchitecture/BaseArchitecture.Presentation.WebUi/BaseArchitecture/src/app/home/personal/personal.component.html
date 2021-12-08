@@ -15,11 +15,10 @@
 <br>
 <div class="container">
     <div class="kt-portlet__body">
-        <app-table [data]="listProyectos" 
+        <app-table [data]="listPersonal" 
             [configTable]="configTable"
             [totalItems]="totalItems"
             [headers]="headers"
-            (edit)="viewDetail($event)"
             (edit2)="editDetail($event)">
         </app-table>
     </div>
