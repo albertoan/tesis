@@ -71,3 +71,4 @@ C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\
 C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CoreCompileInputs.cache
 C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.dll
 C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.pdb
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Application.TransferObject\obj\Debug\BaseArchitecture.Application.TransferObject.csproj.CopyComplete

@@ -37,6 +37,7 @@
             {
                 public const string ListProyectos = "ListProyectos";
                 public const string GetProyectoById = "GetProyectoById";
+                public const string GetListProyectoByIdProyecto = "GetListProyectoByIdProyecto";                
                 public const string ListProyectoCodigo = "ListProyectoCodigo";
                 public const string ListUBIGEO = "ListUBIGEO";
                 public const string ListProgramacion = "ListProgramacion";
@@ -47,7 +48,12 @@
                 public const string RegCronograma = "RegCronograma";
                 public const string ListMenu = "ListMenu";
                 public const string ListProyectoCronograma = "ListProyectoCronograma";
-                public const string ListProyectosRpt = "ListProyectosRpt"; 
+                public const string ListProyectosRpt = "ListProyectosRpt";
+                public const string RptCantidadPoblacionPorDepartamento = "RptCantidadPoblacionPorDepartamento";
+                public const string RptCantidadProyectosPorCicloInversion = "RptCantidadProyectosPorCicloInversion";
+                public const string RptCantidadProyectosPorTipoProyecto = "RptCantidadProyectosPorTipoProyecto";
+                public const string RptCostoPorDepartamento = "RptCostoPorDepartamento";
+                public const string RptCostoPorTipoProyecto = "RptCostoPorTipoProyecto";
             }
         }
 

@@ -105,6 +105,16 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.GetListProyectoByIdProyecto)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest)
+        {
+            var result = DemoService.GetListProyectoByIdProyecto(proyectoRequest);
+            return Ok(result);
+        }
+
+        [HttpPost]
         [Route(IncomeWebApi.MethodApi.Siscose.ListProyectoCodigo)]
         [RequestLoggerFilterAttribute]
         [UnControlledExceptionFilterAttribute]
@@ -201,6 +211,56 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
         {
             var answerActionPendingsExcel = DemoService.ListProyectosRpt();
             return Ok(answerActionPendingsExcel);
+        }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCantidadPoblacionPorDepartamento)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult RptCantidadPoblacionPorDepartamento()
+        {
+            var result = DemoService.RptCantidadPoblacionPorDepartamento();
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCantidadProyectosPorCicloInversion)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult RptCantidadProyectosPorCicloInversion()
+        {
+            var result = DemoService.RptCantidadProyectosPorCicloInversion();
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCantidadProyectosPorTipoProyecto)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult RptCantidadProyectosPorTipoProyecto()
+        {
+            var result = DemoService.RptCantidadProyectosPorTipoProyecto();
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCostoPorDepartamento)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult RptCostoPorDepartamento()
+        {
+            var result = DemoService.RptCostoPorDepartamento();
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCostoPorTipoProyecto)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult RptCostoPorTipoProyecto()
+        {
+            var result = DemoService.RptCostoPorTipoProyecto();
+            return Ok(result);
         }
     }
 }

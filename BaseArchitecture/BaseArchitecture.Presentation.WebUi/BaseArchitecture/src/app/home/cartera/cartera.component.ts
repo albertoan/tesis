@@ -105,7 +105,12 @@ export class CarteraComponent implements OnInit {
             type: 'edit',
             icon: 'fas fa-search',
             tooltip: 'Consultar'
-        }
+        },
+        {
+          type: 'edit2',
+          icon: 'fas fa-pencil-alt',
+          tooltip: 'Editar'
+      }
           ]
         }
       ];
@@ -117,6 +122,15 @@ export class CarteraComponent implements OnInit {
           this.router.navigate(['cartera/detail']);
         } else return;
     }
+
+    editDetail = (item) => {
+      debugger
+      
+      this.localStorage.setJsonValue('EditRequestProyecto', item);
+      if (item != null && item != '') {
+        this.router.navigate(['cartera/edit']);
+      } else return;
+  }
 
     registerProject = () => {
        this.router.navigate(['cartera/register']);

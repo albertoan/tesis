@@ -194,3 +194,4 @@ C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Presentation.UploadS3\obj\Debug
 C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Presentation.UploadS3\obj\Debug\BaseArchitecture.Presentation.UploadS3.csproj.CoreCompileInputs.cache
 C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Presentation.UploadS3\obj\Debug\BaseArchitecture.Presentation.UploadS3.dll
 C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Presentation.UploadS3\obj\Debug\BaseArchitecture.Presentation.UploadS3.pdb
+C:\GitHubTesis\BaseArchitecture\BaseArchitecture.Presentation.UploadS3\obj\Debug\BaseArchitecture.Presentation.UploadS3.csproj.CopyComplete

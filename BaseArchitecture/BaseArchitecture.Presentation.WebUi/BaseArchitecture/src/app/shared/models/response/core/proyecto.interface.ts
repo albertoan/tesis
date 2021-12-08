@@ -25,6 +25,8 @@ export class Proyecto {
     NombresCompleto: string;
     IdTipoProyecto: string;
     Estado: string;
+	FechaDesde?: string;
+	FechaHasta?: string;	
 	Insumos: Insumos;
 	ProyectoActividadesRequest: Actividades [];
   }

@@ -70,6 +70,12 @@
                                     <em class="fas {{button.icon}}"></em>
                                 </button>
 
+                                <button style="border: none;" *ngIf="button.type == 'edit2'" type="button"
+                                    (click)="edit2Click(record)" tooltip="{{ button.tooltip }}" placement="auto"
+                                    container="body" class="btn btn-default btn-sm">
+                                    <em class="fas {{button.icon}}"></em>
+                                </button>
+
                                 <button style="border: none;"
                                     *ngIf="button.type == 'toggleOn' && record?.RecordStatus == recordStatus.Activate"
                                     type="button" (click)="deactivateClick(record)" tooltip="{{ button.tooltip }}"

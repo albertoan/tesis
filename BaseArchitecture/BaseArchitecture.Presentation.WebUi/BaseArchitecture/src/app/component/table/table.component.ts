@@ -29,6 +29,8 @@ export class TableComponent implements OnInit, OnChanges {
   @Output()
   edit: EventEmitter<any> = new EventEmitter<any>();
   @Output()
+  edit2: EventEmitter<any> = new EventEmitter<any>();
+  @Output()
   deactivate: EventEmitter<any> = new EventEmitter<any>();
   @Output()
   filter: EventEmitter<any> = new EventEmitter<any>();
@@ -168,6 +170,10 @@ export class TableComponent implements OnInit, OnChanges {
 
   editClick = (item: any) => {
     this.edit.emit(item);
+  };
+
+  edit2Click = (item: any) => {
+    this.edit2.emit(item);
   };
 
   searchHeader = (val: string, columnHeader: string) => {

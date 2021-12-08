@@ -54,6 +54,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'cartera/edit',
+        loadChildren: () =>
+          import('src/app/home/cartera/edit-proyecto/edit-proyecto.module').then(
+            (m) => m.EditProyectoModule
+          ),
+      },
+      {
         path: 'actividades',
         loadChildren: () =>
           import('src/app/home/actividades/actividades.module').then(
