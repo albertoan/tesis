@@ -348,5 +348,20 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
                 InvokeWebApi.InvokePostAnonymousEntity<Response<List<RptCostoPorTipoProyectoResponse>>>(urlApi, string.Empty);
             return Ok(result);
         }
+
+        [HttpPost]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Demo.RegPersonal)]
+        public IHttpActionResult RegPersonal(PersonalRequest personalRequest)
+        {
+            var postData = Newtonsoft.Json.JsonConvert.SerializeObject(personalRequest);
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Demo}/{IncomeWebApi.MethodApi.Demo.RegPersonal}";
+            var result =
+                InvokeWebApi.InvokePostHeaderEntity<Response<int>>(urlApi, GetHeaderRequest(),
+                    postData);
+            return Ok(result);
+        }
     }
 }

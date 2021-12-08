@@ -92,5 +92,32 @@ namespace BaseArchitecture.Repository.Data.Transactional
 
             return response;
         }
+        public Response<int> RegPersonal(PersonalRequest personalRequest)
+        {
+            Response<int> response;
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@ParamIIdCoordinador", personalRequest.IdCoordinador);
+                parameters.Add("@ParamINombre", personalRequest.Nombre);
+                parameters.Add("@ParamIApellidoPaterno", personalRequest.ApellidoPaterno);
+                parameters.Add("@ParamIApellidoMaterno", personalRequest.ApellidoMaterno);
+                parameters.Add("@ParamICorreo", personalRequest.Correo);
+                parameters.Add("@ParamITelefono", personalRequest.Telefono);
+                parameters.Add("@ParamIEstado", personalRequest.Estado);
+                parameters.Add("@ParamIIdZona", personalRequest.IdZona);
+                parameters.Add("@ParamIAsignado", personalRequest.Asignado);
+                parameters.Add("@ParamICargo", personalRequest.Cargo);
+
+                var result = connection.Execute(
+                    $"{IncomeDataProcedures.Schema.Cnfg}.{IncomeDataProcedures.Procedure.RegPersonal}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure);
+
+                response = new Response<int>(result);
+            }
+
+            return response;
+        }
     }
 }

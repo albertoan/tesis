@@ -9,6 +9,7 @@
         {
             public const string Demo = "Demo";
             public const string Core = "Core";
+            public const string Cnfg = "Cnfg";
         }
 
         /// <summary>
@@ -26,6 +27,7 @@
             public const string ListPersonAll = "USP_LIST_PersonAll";
 
             public const string RegPerson = "USP_REG_Person";
+            public const string RegPersonal = "USP_REG_Personal";
 
             public const string UpdPersonState = "USP_UPD_PersonState";
 

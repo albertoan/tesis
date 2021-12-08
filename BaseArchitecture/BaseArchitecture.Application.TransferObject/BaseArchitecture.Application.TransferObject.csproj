@@ -51,6 +51,7 @@
     <Compile Include="Request\Demo\InsumosRequest.cs" />
     <Compile Include="Request\Demo\PersonBaseRequest.cs" />
     <Compile Include="Request\Demo\PersonFilterRequest.cs" />
+    <Compile Include="Request\Demo\PersonalRequest.cs" />
     <Compile Include="Request\Demo\PersonRequest.cs" />
     <Compile Include="Request\Demo\ProgramacionRequest.cs" />
     <Compile Include="Request\Demo\ProyectoActividadesRequest.cs" />
