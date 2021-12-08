@@ -34,5 +34,6 @@ namespace BaseArchitecture.Application.IService.Demo
         Response<List<RptCantidadProyectosPorTipoProyectoResponse>> RptCantidadProyectosPorTipoProyecto();
         Response<List<RptCostoPorDepartamentoResponse>> RptCostoPorDepartamento();
         Response<List<RptCostoPorTipoProyectoResponse>> RptCostoPorTipoProyecto();
+        Response<int> RegPersonal(PersonalRequest personalRequest);
     }
 }

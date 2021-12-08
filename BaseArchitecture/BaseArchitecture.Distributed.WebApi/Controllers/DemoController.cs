@@ -262,5 +262,15 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
             var result = DemoService.RptCostoPorTipoProyecto();
             return Ok(result);
         }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Demo.RegPersonal)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult RegPersonal(PersonalRequest personalRequest)
+        {
+            var result = DemoService.RegPersonal(personalRequest);
+            return Ok(result);
+        }
     }
 }

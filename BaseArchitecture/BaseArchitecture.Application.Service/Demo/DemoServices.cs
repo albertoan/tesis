@@ -343,5 +343,23 @@ namespace BaseArchitecture.Application.Service.Demo
             };
             return response;
         }
+        public Response<int> RegPersonal(PersonalRequest personalRequest)
+        {
+            var result = new Response<int>(1);
+            using (var transaction = new TransactionScope())
+            {
+                try
+                {
+                    DemoTransaction.RegPersonal(personalRequest);
+                    transaction.Complete();
+                }
+                catch (Exception e)
+                {
+                    TraceLogger.RegisterExceptionDemand(JsonConvert.SerializeObject(e));
+                    result = new Response<int>(0);
+                }
+            }
+            return result;
+        }
     }
 }

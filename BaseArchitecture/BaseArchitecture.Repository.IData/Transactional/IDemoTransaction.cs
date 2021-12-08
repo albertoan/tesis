@@ -10,5 +10,6 @@ namespace BaseArchitecture.Repository.IData.Transactional
         Response<int> RegPerson(PersonEntity personEntity, BaseRecordRequest baseRecordRequest);
         Response<int> UpdPersonState(PersonBaseRequest personBaseRequest, BaseRecordRequest baseRecordRequest);
         Response<int> RegCronograma(ProyectoActividadesRequest proyectoActividadesRequest, int idProyecto);
+        Response<int> RegPersonal(PersonalRequest personalRequest);
     }
 }

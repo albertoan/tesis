@@ -30,6 +30,7 @@
                 public const string ListPersonAll = "ListPersonAll";
                 public const string UpdPersonState = "UpdPersonState";
                 public const string RegPerson = "RegPerson";
+                public const string RegPersonal = "RegPersonal";
                 public const string ListMasterTableByValue = "ListMasterTableByValue";
             }
 
