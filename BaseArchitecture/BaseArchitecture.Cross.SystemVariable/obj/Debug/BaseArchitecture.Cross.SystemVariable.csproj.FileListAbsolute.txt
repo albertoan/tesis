@@ -52,3 +52,14 @@ C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVar
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.CopyComplete
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.dll
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\EPPlus.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\Newtonsoft.Json.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\EPPlus.xml
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\bin\Debug\Newtonsoft.Json.xml
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.AssemblyReference.cache
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.CoreCompileInputs.cache
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.csproj.CopyComplete
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Cross.SystemVariable\obj\Debug\BaseArchitecture.Cross.SystemVariable.pdb

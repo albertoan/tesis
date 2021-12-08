@@ -29,5 +29,10 @@ namespace BaseArchitecture.Application.IService.Demo
         Response<List<CronogramaResponse>> ListProyectoCronograma();
         Response<List<OptionResponse>> ListMenu(UserRequest userEdit);
         Response<byte[]> ListProyectosRpt();
+        Response<List<RptCantidadPoblacionPorDepartamentoResponse>> RptCantidadPoblacionPorDepartamento();
+        Response<List<RptCantidadProyectosPorCicloInversionResponse>> RptCantidadProyectosPorCicloInversion();
+        Response<List<RptCantidadProyectosPorTipoProyectoResponse>> RptCantidadProyectosPorTipoProyecto();
+        Response<List<RptCostoPorDepartamentoResponse>> RptCostoPorDepartamento();
+        Response<List<RptCostoPorTipoProyectoResponse>> RptCostoPorTipoProyecto();
     }
 }

@@ -68,6 +68,11 @@
     <Compile Include="Response\Access\OptionResponse .cs" />
     <Compile Include="Response\Access\ProcessResponse.cs" />
     <Compile Include="Response\Access\ProfileResponse.cs" />
+    <Compile Include="Response\Access\RptCostoPorTipoProyectoResponse.cs" />
+    <Compile Include="Response\Access\RptCostoPorDepartamentoResponse.cs" />
+    <Compile Include="Response\Access\RptCantidadProyectosPorTipoProyectoResponse.cs" />
+    <Compile Include="Response\Access\RptCantidadProyectosPorCicloInversionResponse.cs" />
+    <Compile Include="Response\Access\RptCantidadPoblacionPorDepartamentoResponse.cs" />
     <Compile Include="Response\Access\RptListProyectosResponse.cs" />
     <Compile Include="Response\Common\TagMessageResponse.cs" />
     <Compile Include="Response\Common\BasicControlAuditResponse.cs" />

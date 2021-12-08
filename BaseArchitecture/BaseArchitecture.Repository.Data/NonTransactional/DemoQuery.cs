@@ -450,7 +450,6 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
             }
             return response;
         }
-
         public Response<List<RptListProyectosResponse>> ListProyectosRpt()
         {
             Response<List<RptListProyectosResponse>> response;
@@ -474,7 +473,85 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
             }
             return response;
         }
+        public IEnumerable<RptCantidadPoblacionPorDepartamentoResponse> RptCantidadPoblacionPorDepartamento()
+        {
+            IEnumerable<RptCantidadPoblacionPorDepartamentoResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                var resultResponse = connection.QueryAsync<RptCantidadPoblacionPorDepartamentoResponse>(
+                    $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RptCantidadPoblacionPorDepartamento}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
+        public IEnumerable<RptCantidadProyectosPorCicloInversionResponse> RptCantidadProyectosPorCicloInversion()
+        {
+            IEnumerable<RptCantidadProyectosPorCicloInversionResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                var resultResponse = connection.QueryAsync<RptCantidadProyectosPorCicloInversionResponse>(
+                    $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RptCantidadProyectosPorCicloInversion}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
+        public IEnumerable<RptCantidadProyectosPorTipoProyectoResponse> RptCantidadProyectosPorTipoProyecto()
+        {
+            IEnumerable<RptCantidadProyectosPorTipoProyectoResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                var resultResponse = connection.QueryAsync<RptCantidadProyectosPorTipoProyectoResponse>(
+                    $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RptCantidadProyectosPorTipoProyecto}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
+        public IEnumerable<RptCostoPorDepartamentoResponse> RptCostoPorDepartamento()
+        {
+            IEnumerable<RptCostoPorDepartamentoResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                var resultResponse = connection.QueryAsync<RptCostoPorDepartamentoResponse>(
+                    $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RptCostoPorDepartamento}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
+        public IEnumerable<RptCostoPorTipoProyectoResponse> RptCostoPorTipoProyecto()
+        {
+            IEnumerable<RptCostoPorTipoProyectoResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                var resultResponse = connection.QueryAsync<RptCostoPorTipoProyectoResponse>(
+                    $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RptCostoPorTipoProyecto}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
     }
-
-
 }

@@ -48,7 +48,12 @@
                 public const string RegCronograma = "RegCronograma";
                 public const string ListMenu = "ListMenu";
                 public const string ListProyectoCronograma = "ListProyectoCronograma";
-                public const string ListProyectosRpt = "ListProyectosRpt"; 
+                public const string ListProyectosRpt = "ListProyectosRpt";
+                public const string RptCantidadPoblacionPorDepartamento = "RptCantidadPoblacionPorDepartamento";
+                public const string RptCantidadProyectosPorCicloInversion = "RptCantidadProyectosPorCicloInversion";
+                public const string RptCantidadProyectosPorTipoProyecto = "RptCantidadProyectosPorTipoProyecto";
+                public const string RptCostoPorDepartamento = "RptCostoPorDepartamento";
+                public const string RptCostoPorTipoProyecto = "RptCostoPorTipoProyecto";
             }
         }
 

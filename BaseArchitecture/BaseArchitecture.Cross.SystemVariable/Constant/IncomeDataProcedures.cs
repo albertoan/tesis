@@ -47,7 +47,12 @@
             public const string GetPersonByEmail = "USP_GET_PersonByEmail";
             public const string GetPersonByPerfil = "USP_GET_PersonByPerfil";
             public const string ListProyectosCronograma = "USP_LIST_ProyectosCronograma";
-            public const string ListProyectosRpt = "USP_LIST_ProyectosRpt"; 
+            public const string ListProyectosRpt = "USP_LIST_ProyectosRpt";
+            public const string RptCantidadPoblacionPorDepartamento = "USP_RPT_CantidadPoblacionPorDepartamento";
+            public const string RptCantidadProyectosPorCicloInversion = "USP_RPT_CantidadProyectosPorCicloInversion";
+            public const string RptCantidadProyectosPorTipoProyecto = "USP_RPT_CantidadProyectosPorTipoProyecto";
+            public const string RptCostoPorDepartamento = "USP_RPT_CostoPorDepartamento";
+            public const string RptCostoPorTipoProyecto = "USP_RPT_CostoPorTipoProyecto";
         }
     }
 }

@@ -25,5 +25,10 @@ namespace BaseArchitecture.Repository.IData.NonTransactional
         Response<LoginResponse> ValidateUser(string email);
         IEnumerable<OptionResponse> ListMenu(UserRequest userEdit);
         Response<List<RptListProyectosResponse>> ListProyectosRpt();
+        IEnumerable<RptCantidadPoblacionPorDepartamentoResponse> RptCantidadPoblacionPorDepartamento();
+        IEnumerable<RptCantidadProyectosPorCicloInversionResponse> RptCantidadProyectosPorCicloInversion();
+        IEnumerable<RptCantidadProyectosPorTipoProyectoResponse> RptCantidadProyectosPorTipoProyecto();
+        IEnumerable<RptCostoPorDepartamentoResponse> RptCostoPorDepartamento();
+        IEnumerable<RptCostoPorTipoProyectoResponse> RptCostoPorTipoProyecto();
     }
 }
