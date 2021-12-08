@@ -128,3 +128,18 @@ export class AttachedFileRequest
   FileBase64?: string | ArrayBuffer;
   FileBuffer?: string;
 }
+
+
+export class Personal
+{
+	IdCoordinador: string;
+	Nombre: string;
+	ApellidoPaterno: string;
+	ApellidoMaterno: string;  
+	Correo: string ;
+	Telefono: string;
+	Estado: string;
+	IdZona: string;
+	Asignado: string;
+	Cargo: string;	
+}

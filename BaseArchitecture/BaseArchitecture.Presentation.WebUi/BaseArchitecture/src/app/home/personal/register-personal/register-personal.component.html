@@ -1,0 +1,115 @@
+<div class="container row" style="margin-top: 10px;">
+    <div  class="col-md-10">
+        <p style="text-align: left; font-size: 16px; font-weight: bold;margin-bottom: 0;">
+            Mantenedor de Personal
+        </p>
+    </div>
+    <div class="col-md-2" style="text-align: end;">
+        <button (click)="registerProject()" type="button" class="btn btn-primary" ><em class="fas fa-save"></em> Grabar </button>
+    </div>
+</div>
+
+<div class="col-md-12" style="margin-top: 20px;">
+    <div class="container">
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Nombre:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="personal.Nombre"/>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Ape. Paterno:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="personal.ApellidoPaterno"/>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Ape. Materno:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="personal.ApellidoMaterno"/>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Correo:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="personal.Correo"/>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Telefono:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="personal.Telefono"/>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Estado:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="personal.Estado" class="form-control" >                    
+                    <option value="1">Activo</option>
+                    <option value="0">Desactivado</option>                    
+                </select>
+            </div>          
+        </div>
+        <br>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Zona:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="personal.IdZona" class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="1">Centro</option>
+                    <option value="2">Noreste</option>
+                    <option value="3">Norte</option>
+                    <option value="4">Sur</option>
+                </select>
+            </div> 
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Asignado:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="personal.Asignado" class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="1">Asignado</option>
+                    <option value="0">No Asignado</option> 
+                </select>
+            </div>             
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Cargo:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="personal.Cargo" class="form-control" >
+                    <option value="">-- Seleccione --</option>
+                    <option value="C">Coordinador</option>
+                    <option value="A">Administrador</option> 
+                </select>
+            </div>   
+        </div>
+
+    </div>
+    <br>
+
+</div>
