@@ -123,7 +123,7 @@ export class GeneralService {
   RegPersonal(personal: Personal): Observable<any> {
     return this.http
       .post<any>(
-        this.urlWebApi + Path.Siscose + Siscose.RegProyecto,
+        this.urlWebApi + Path.Siscose + Siscose.RegPersonal,
         personal
       )
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));

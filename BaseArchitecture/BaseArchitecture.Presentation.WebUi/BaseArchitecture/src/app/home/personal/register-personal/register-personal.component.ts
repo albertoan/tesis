@@ -136,7 +136,7 @@ export class RegisterPersonalComponent implements OnInit {
       this.listSchedules = this.listSchedules.filter((x) => x.Orden != Orden);
     }
 
-    registerProject = () => {
+    registerPersonal = () => {
 
       if( this.personal.Nombre == "" || this.personal.Nombre == undefined ){
         this.toastr.info("Ingrese el Nombre")
