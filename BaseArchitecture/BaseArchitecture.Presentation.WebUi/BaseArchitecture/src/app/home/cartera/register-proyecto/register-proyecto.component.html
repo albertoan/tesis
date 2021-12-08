@@ -1,0 +1,806 @@
+<div class="container row" style="margin-top: 10px;">
+    <div  class="col-md-10">
+        <p style="text-align: left; font-size: 16px; font-weight: bold;margin-bottom: 0;">
+            Cartera de Proyectos
+        </p>
+    </div>
+    <div class="col-md-2" style="text-align: end;">
+        <button (click)="registerProject()" type="button" class="btn btn-primary" ><em class="fas fa-save"></em> Grabar </button>
+    </div>
+</div>
+
+<div class="col-md-12" style="margin-top: 20px;">
+    <div class="container">
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Código Proyecto:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="proyecto.Codigo"/>
+            </div>
+    
+        </div>
+        <br>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Proyecto:
+                </label>
+            </div>
+            <div class="col-md-10">
+                <input type="text" class="form-control" [(ngModel)]="proyecto.Nombre"/>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Transferencia:
+                </label>
+            </div>
+            <div class="col-md-1">
+                <select [(ngModel)]="proyecto.Transferencia" class="form-control">
+                    <option value="NO">NO</option>
+                    <option value="SI">SI</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <label style="font-weight: bold;">
+                    Inversión:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdTipoInversion"  class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="{{item.Id}}" *ngFor="let item of listInversion">{{ item.Descripcion1 }}</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <label style="font-weight: bold;">
+                    Ciclo:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdCicloInversion"  class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="{{item.Id}}" *ngFor="let item of listCiclo">{{ item.Descripcion1 }}</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <label style="font-weight: bold;">
+                    Naturaleza:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdNaturaleza" class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="{{item.Id}}" *ngFor="let item of listNaturaleza">{{ item.Descripcion1 }}</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Modalidad:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdModalidad"  class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="{{item.Id}}" *ngFor="let item of listModalidad">{{ item.Descripcion1 }}</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Departamento:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdDepartamento" (change)="loadProvincia($event.target.value)" class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="{{item.IdDepartamento}}" *ngFor="let item of listDepartamentoResponse">{{ item.Departamento }}</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Provincia:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdProvincia" (change)="loadDistrito($event.target.value)" class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="{{item.IdProvincia}}" *ngFor="let item of listProvinciaResponse">{{ item.Provincia }}</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Distrito:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdDistrito" class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="{{item.IdDistrito}}" *ngFor="let item of listDistritoResponse">{{ item.Distrito }}</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Programa:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="proyecto.Programa"/>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Zona:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdZona" class="form-control">
+                    <option value="">-- Seleccione --</option>
+                    <option value="1">CENTRO</option>
+                    <option value="2">NORESTE</option>
+                    <option value="3">NORTE</option>
+                    <option value="4">SUR</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Tipo Proyecto:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <select [(ngModel)]="proyecto.IdTipoProyecto" class="form-control" (change)="selectTipoProyecto($event.target.value)">
+                    <option value="">-- Seleccione --</option>
+                    <option value="1">Primario</option>
+                    <option value="2">Secundario</option>
+                    <option value="3">Paneles Solares</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Desde:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="text" ng-readonly="all" class="form-control" style="height: 36px;"
+                        autocomplete="off"
+                        [(ngModel)]="SinceDate" name = "sinceDate"
+                        placeholder="Fecha Inicio" #dps="bsDatepicker" bsDatepicker
+                        [bsConfig]="{ adaptivePosition: true }">
+                    <div class="input-group-append" (click)="dps.toggle()" [attr.aria-expanded]="dps.isOpen">
+                        <span class="input-group-text"><em class="far fa-calendar-alt"></em></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Hasta:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="text" class="form-control" style="height: 36px;"
+                        autocomplete="off"
+                        [(ngModel)]="UntilDate" name = "untilDate"
+                        placeholder="Fecha Fin" #dpe="bsDatepicker" bsDatepicker
+                        [bsConfig]="{ adaptivePosition: true }">
+                    <div class="input-group-append" (click)="dpe.toggle()" [attr.aria-expanded]="dpe.isOpen">
+                        <span class="input-group-text"><em class="far fa-calendar-alt"></em></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12 row">
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Costo:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="proyecto.Costo"/>
+            </div>
+            <div class="col-md-2">
+                <label style="font-weight: bold;">
+                    Poblacion:
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="proyecto.Poblacion"/>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="tipoProyecto == '1'" class="container">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        
+                <a class="nav-item nav-link active" id="nav-just-tab" data-toggle="tab" href="#nav-just"
+                    role="tab" aria-controls="nav-just"
+                    aria-selected="false"> Obra </a>
+                <a class="nav-item nav-link" id="nav-obj-tab" data-toggle="tab" href="#nav-clau" role="tab"
+                    aria-controls="nav-obj" aria-selected="false"> Herramientas </a>
+                <a class="nav-item nav-link" id="nav-cro-tab" data-toggle="tab" href="#nav-cro" role="tab"
+                    aria-controls="nav-cro" aria-selected="false"> Cronograma </a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-just" role="tabpanel" aria-labelledby="nav-just-tab">
+                    <div class="container" style="padding-bottom: 20px; padding-top: 20px;">
+                        <div class="row">
+                            <div class="col-12">
+                                <label style="font-weight: bold;">
+                                    POSTES
+                                </label>
+                            </div>
+                            <br>                 
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <label> Madera: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <label> 12/C6 </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.MaderaTipoA" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <label> 12/C5 </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.MaderaTipoB" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <label> Concreto: </label>
+                            </div>
+                            <div class="col-md-2">
+                                <label> 13m de 400 da/N: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.Concreto" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <label style="font-weight: bold;">
+                                    CONDUCTORES:
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label> Aluminio </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label> Tipo AAAC: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.Aluminio" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                        <div class="row">
+                            <div class="col-12">
+                                <label style="font-weight: bold;">
+                                    AISLADORES:
+                                </label>
+                            </div>               
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <label> Porcelana </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label> PIN ANSI 56-3: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.PIN3" class="form-control">
+                            </div>
+                            <div class="col-md-2">
+                                <label> PIN ANSI 56-4: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.PIN4" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                        <div class="row">
+                            <div class="col-md-1">
+                                <label> Poliméricos </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label> Suspención: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.Suspencion" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                        <div class="row">
+                            <div class="col-12">
+                                <label style="font-weight: bold;">
+                                    PUESTA A TIERRA:
+                                </label>
+                            </div>               
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label> PAT-1 </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.PAT1" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <label> PAT-2 </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.PAT2" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="tab-pane fade" id="nav-clau" role="tabpanel" aria-labelledby="nav-clau-tab">
+                <div class="container" style="padding-bottom: 20px; padding-top: 20px;">
+                    <div class="row">
+                        <div class="col-12">
+                            <label style="font-weight: bold;">
+                                MATERIAL DE FERRETERÍA:
+                            </label>
+                        </div>               
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label> Pernos: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Pernos" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Abrazaderas: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Abrazaderas" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Accesorios de Aisladores: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Aisladores" class="form-control">
+                        </div>
+                    </div>
+                    <br> 
+                    <div class="row">
+                        <div class="col-12">
+                            <label style="font-weight: bold;">
+                                SUB-ESTACIONES DE DISTRIBUCIÓN:
+                            </label>
+                        </div>               
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label> Monofasicas: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Monofasicos" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Bifasicas: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Bifasicos" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Trifasicas: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Trifasicos" class="form-control">
+                        </div>
+                    </div>
+                    <br> 
+                    <div class="row">
+                        <div class="col-12">
+                            <label style="font-weight: bold;">
+                                TABLERO DE DISTRIBUCIÓN:
+                            </label>
+                        </div>               
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label> Transformadores: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Transformadores" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Interruptores Termomágneticos: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Interruptores" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Contactores Tipo A: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Contactores" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label> Medidores de energía: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Medidores" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Fusibles de expulsión: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Fusibles" class="form-control">
+                        </div>
+                    </div>
+                    <br> 
+                    <div class="row">
+                        <div class="col-12">
+                            <label style="font-weight: bold;">
+                                SISTEMA DE PROTECCIÓN:
+                            </label>
+                        </div>               
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label> Pararrayos: </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input [(ngModel)]="insumos.Pararrayos" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-cro" role="tabpanel" aria-labelledby="nav-cro-tab">
+                <div class="container" style="padding-bottom: 20px; padding-top: 20px;">
+                    <div style="text-align: end;">
+                        <button type="button" (click)="newRow()" class="btn btn-primary m-r-10">
+                            <i class="fa fa-plus"></i>Agregar
+                        </button>
+                    </div>
+                    <br>
+                    <div *ngIf="listSchedules.length > 0" class="form-row">
+                        <div class="form-row col-md-12" *ngFor="let item of listSchedules" style="margin-top: 10px;">
+                            <!-- <div class="col-md-1">
+                                <input type="text" style="height: 36px;" class="form-control" [(ngModel)]="item.orden" name = "orden">
+                            </div> -->
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" style="height: 36px;" class="form-control" [(ngModel)]="item.Nombre" name = "nombre">
+                                </div>
+                            </div>
+                            <label class="col-md-1" style="text-align: right;">F. Inicio</label>
+                            <div class="col-md-2">
+                                <div class="input-group">
+                                    <input type="text" ng-readonly="all" class="form-control" style="height: 36px;"
+                                        [(ngModel)]="item.FechaInicio"
+                                        name = "sinceDate"
+                                        placeholder="Fecha Inicio" #dps="bsDatepicker" bsDatepicker
+                                        [bsConfig]="{ adaptivePosition: true }">
+                                    <div class="input-group-append" (click)="dps.toggle()" [attr.aria-expanded]="dps.isOpen">
+                                        <span class="input-group-text"><em class="far fa-calendar-alt"></em></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="col-md-1" style="text-align: right;">F. Fin</label>
+                            <div class="col-md-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" style="height: 36px;"
+                                        [(ngModel)]="item.FechaFin"
+                                        name = "untilDate"
+                                        placeholder="Fecha Fin" #dpe="bsDatepicker" bsDatepicker
+                                        [bsConfig]="{ adaptivePosition: true }">
+                                    <div class="input-group-append" (click)="dpe.toggle()" [attr.aria-expanded]="dpe.isOpen">
+                                        <span class="input-group-text"><em class="far fa-calendar-alt"></em></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button (click)="deleteRow(item.Orden)" class="btn btn-primary m-r-10">
+                                <em class="fa fa-trash"></em>
+                            </button>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div *ngIf="isNew" class="form-row">
+                        <div class="form-row col-md-12" style="margin-top: 10px;">
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" style="height: 36px;" class="form-control" [(ngModel)]="nameProyecto" name = "name">
+                                </div>
+                            </div>
+                            <label class="col-md-1" style="text-align: right;">F. Inicio</label>
+                            <div class="col-md-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" style="height: 36px;"
+                                        [(ngModel)]="desdeFechaDate"
+                                        name = "desdeDate"
+                                        placeholder="Fecha Inicio" #dpss="bsDatepicker" bsDatepicker
+                                        [bsConfig]="{ adaptivePosition: true }">
+                                    <div class="input-group-append" (click)="dpss.toggle()" [attr.aria-expanded]="dpss.isOpen">
+                                        <span class="input-group-text"><em class="far fa-calendar-alt"></em></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="col-md-1" style="text-align: right;">F. Fin</label>
+                            <div class="col-md-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" style="height: 36px;"
+                                        [(ngModel)]="hastaFechaDate"
+                                        name = "hastaDate"
+                                        placeholder="Fecha Fin" #dpsh="bsDatepicker" bsDatepicker
+                                        [bsConfig]="{ adaptivePosition: true }">
+                                    <div class="input-group-append" (click)="dpsh.toggle()" [attr.aria-expanded]="dpsh.isOpen">
+                                        <span class="input-group-text"><em class="far fa-calendar-alt"></em></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" (click)="saveRow()" class="btn btnIcons btn-primary m-r-10">
+                                <em class="fa fa-check"></em>
+                            </button>
+                            &nbsp;&nbsp;
+                            <button (click)="removeRow()" class="btn btn-primary m-r-10">
+                                <em class="fa fa-trash"></em>
+                            </button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="tipoProyecto == '2'" class="container">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        
+                <a class="nav-item nav-link active" id="nav-just-tab" data-toggle="tab" href="#nav-just"
+                    role="tab" aria-controls="nav-just"
+                    aria-selected="false"> Obra </a>
+                <a class="nav-item nav-link" id="nav-obj-tab" data-toggle="tab" href="#nav-clau" role="tab"
+                    aria-controls="nav-obj" aria-selected="false"> Herramientas </a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-just" role="tabpanel" aria-labelledby="nav-just-tab">
+                    <div class="container" style="padding-bottom: 20px; padding-top: 20px;">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label style="font-weight: bold;">
+                                    NÚMERO DE LOTES:
+                                </label>
+                            </div>
+                            <div class="col-md-2">
+                                <input [(ngModel)]="insumos.Lotes" class="form-control">
+                            </div>
+                            <br>                 
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label style="font-weight: bold;">
+                                    POSTES
+                                </label>
+                            </div>
+                            <br>                 
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label> Madera: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <label> 8/C7 </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.MaderaSecundarioTipoA" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <label> Concreto: </label>
+                            </div>
+                            <div class="col-md-2">
+                                <label> 8m de 200 da/N: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.ConcretoSecundarioTipoA" class="form-control">
+                            </div>
+                            <div class="col-md-2">
+                                <label> 11m de 200 da/N: </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.ConcretoSecundarioTipoB" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label style="font-weight: bold;">
+                                    CONDUCTORES:
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label> Aluminio </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label> Autoportante: </label>
+                            </div>
+                            <div class="col-md-2">
+                                <input [(ngModel)]="insumos.AluminioSecundario" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label style="font-weight: bold;">
+                                    ALUMBRADO PÚBLICO:
+                                </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.Alumbrado"  type="checkbox">
+                            </div>
+                            <div class="col-md-3">
+                                <label style="font-weight: bold;">
+                                    RETENIDAS Y ANCLAJES:
+                                </label>
+                            </div>
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.Retenidas"  type="checkbox">
+                            </div>
+                            <div class="col-md-2">
+                                <label style="font-weight: bold;">
+                                    PUESTA A TIERRA:
+                                </label>
+                            </div>    
+                            <div class="col-md-1">
+                                <input [(ngModel)]="insumos.PuestaTierra"  type="checkbox">
+                            </div>   
+                        </div>
+                    </div>
+            </div>
+            <div class="tab-pane fade" id="nav-clau" role="tabpanel" aria-labelledby="nav-clau-tab">
+                <div class="container" style="padding-bottom: 20px; padding-top: 20px;">
+                    <div class="row">
+                        <div class="col-12">
+                            <label style="font-weight: bold;">
+                                MATERIAL DE FERRETERÍA:
+                            </label>
+                        </div>               
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label> Grapa de suspención: </label>
+                        </div>
+                        <div class="col-md-2">
+                            <input [(ngModel)]="insumos.GrapaSuspencion" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Grapa de anclaje: </label>
+                        </div>
+                        <div class="col-md-2">
+                            <input [(ngModel)]="insumos.GrapaAnclaje" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label> Pernos: </label>
+                        </div>
+                        <div class="col-md-2">
+                            <input [(ngModel)]="insumos.PernosSecundarios"  class="form-control">
+                        </div>
+                    </div>
+                    <br> 
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="font-weight: bold;">
+                                CONEXIONES DOMICILIARIAS:
+                            </label>
+                        </div>      
+                        <div class="col-md-2">
+                            <input [(ngModel)]="insumos.Conexiones" class="form-control">
+                        </div>         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="tipoProyecto == '3'" class="container">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        
+                <a class="nav-item nav-link active" id="nav-just-tab" data-toggle="tab" href="#nav-just"
+                    role="tab" aria-controls="nav-just"
+                    aria-selected="false"> Obra </a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-just" role="tabpanel" aria-labelledby="nav-just-tab">
+                    <div class="container" style="padding-bottom: 20px; padding-top: 20px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>
+                                    Paneles solares STP260-20/Wem 260Wp:
+                                </label>
+                            </div>
+                            <div class="col-md-2">
+                                <input [(ngModel)]="insumos.PanelesSolares" class="form-control">
+                            </div>
+                        </div>
+                        <br>  
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label> Celdas de LiFePO4 Accupack LA3016: </label>
+                            </div>
+                            <div class="col-md-2">
+                                <input [(ngModel)]="insumos.Celdas" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label> Inversor Trífásico de Red STP 25000TL-30: </label>
+                            </div>
+                            <div class="col-md-2">
+                                <input [(ngModel)]="insumos.Inversor" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label> Soporte del Generador Fotovoltaico para módulos 260Wp modelo PVmax3: </label>
+                            </div>
+                            <div class="col-md-2">
+                                <input [(ngModel)]="insumos.Soporte" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label> Estructura de Soporte del Banco de Baterías, rack para celdas de LiFePO4: </label>
+                            </div>
+                            <div class="col-md-2">
+                                <input [(ngModel)]="insumos.Estructura" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label> Cableado: </label>
+                            </div>
+                            <div class="col-md-2">
+                                <input [(ngModel)]="insumos.Cableado" class="form-control">
+                            </div>
+                        </div>
+                        <br> 
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
