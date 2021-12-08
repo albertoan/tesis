@@ -269,7 +269,7 @@ namespace BaseArchitecture.Application.Service.Demo
             var result = DemoQuery.ListProyectosRpt();
             var ListEmployeeRptResponse = result.Value;
 
-        string[] columns = {
+            string[] columns = {
                  "CODIGO"
                 ,"PROYECTO"
                 ,"TRANSFERENCIA"
@@ -282,7 +282,7 @@ namespace BaseArchitecture.Application.Service.Demo
                 ,"DEPARTAMENTO"
                 ,"PROVINCIA"
                 ,"DISTRITO"
-    };
+            };
 
             var listBytes = Util.ExcelExportHelper.ExportExcel(ListEmployeeRptResponse, string.Empty, true, columns);
 
@@ -291,6 +291,56 @@ namespace BaseArchitecture.Application.Service.Demo
                 Value = listBytes
             };
 
+            return response;
+        }
+        public Response<List<RptCantidadPoblacionPorDepartamentoResponse>> RptCantidadPoblacionPorDepartamento()
+        {
+            var result = DemoQuery.RptCantidadPoblacionPorDepartamento().ToList();
+
+            var response = new Response<List<RptCantidadPoblacionPorDepartamentoResponse>>()
+            {
+                Value = result
+            };
+            return response;
+        }
+        public Response<List<RptCantidadProyectosPorCicloInversionResponse>> RptCantidadProyectosPorCicloInversion()
+        {
+            var result = DemoQuery.RptCantidadProyectosPorCicloInversion().ToList();
+
+            var response = new Response<List<RptCantidadProyectosPorCicloInversionResponse>>()
+            {
+                Value = result
+            };
+            return response;
+        }
+        public Response<List<RptCantidadProyectosPorTipoProyectoResponse>> RptCantidadProyectosPorTipoProyecto()
+        {
+            var result = DemoQuery.RptCantidadProyectosPorTipoProyecto().ToList();
+
+            var response = new Response<List<RptCantidadProyectosPorTipoProyectoResponse>>()
+            {
+                Value = result
+            };
+            return response;
+        }
+        public Response<List<RptCostoPorDepartamentoResponse>> RptCostoPorDepartamento()
+        {
+            var result = DemoQuery.RptCostoPorDepartamento().ToList();
+
+            var response = new Response<List<RptCostoPorDepartamentoResponse>>()
+            {
+                Value = result
+            };
+            return response;
+        }
+        public Response<List<RptCostoPorTipoProyectoResponse>> RptCostoPorTipoProyecto()
+        {
+            var result = DemoQuery.RptCostoPorTipoProyecto().ToList();
+
+            var response = new Response<List<RptCostoPorTipoProyectoResponse>>()
+            {
+                Value = result
+            };
             return response;
         }
     }

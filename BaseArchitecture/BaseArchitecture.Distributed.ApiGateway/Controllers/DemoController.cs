@@ -283,5 +283,70 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
                 InvokeWebApi.InvokePostAnonymousEntity<Response<List<OptionResponse>>>(urlApi, postData);
             return Ok(result);
         }
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCantidadPoblacionPorDepartamento)]
+        public IHttpActionResult RptCantidadPoblacionPorDepartamento()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.RptCantidadPoblacionPorDepartamento}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<RptCantidadPoblacionPorDepartamentoResponse>>>(urlApi, string.Empty);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCantidadProyectosPorCicloInversion)]
+        public IHttpActionResult RptCantidadProyectosPorCicloInversion()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.RptCantidadProyectosPorCicloInversion}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<RptCantidadProyectosPorCicloInversionResponse>>>(urlApi, string.Empty);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCantidadProyectosPorTipoProyecto)]
+        public IHttpActionResult RptCantidadProyectosPorTipoProyecto()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.RptCantidadProyectosPorTipoProyecto}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<RptCantidadProyectosPorTipoProyectoResponse>>>(urlApi, string.Empty);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCostoPorDepartamento)]
+        public IHttpActionResult RptCostoPorDepartamento()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.RptCostoPorDepartamento}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<RptCostoPorDepartamentoResponse>>>(urlApi, string.Empty);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.RptCostoPorTipoProyecto)]
+        public IHttpActionResult RptCostoPorTipoProyecto()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.RptCostoPorTipoProyecto}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<RptCostoPorTipoProyectoResponse>>>(urlApi, string.Empty);
+            return Ok(result);
+        }
     }
 }

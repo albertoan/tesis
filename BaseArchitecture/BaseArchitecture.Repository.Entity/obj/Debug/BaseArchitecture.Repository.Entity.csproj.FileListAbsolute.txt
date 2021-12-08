@@ -63,3 +63,16 @@ C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Enti
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.csproj.CopyComplete
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.dll
 C:\GINO\Otros\beto tesis\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.pdb
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\BaseArchitecture.Repository.Entity.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\BaseArchitecture.Repository.Entity.pdb
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\BaseArchitecture.Cross.SystemVariable.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\EPPlus.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\Newtonsoft.Json.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\BaseArchitecture.Cross.SystemVariable.pdb
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\EPPlus.xml
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\bin\Debug\Newtonsoft.Json.xml
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.csproj.AssemblyReference.cache
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.csproj.CoreCompileInputs.cache
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.csproj.CopyComplete
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.dll
+E:\Percy\Tesis Betito\Fuentes\tesis\BaseArchitecture\BaseArchitecture.Repository.Entity\obj\Debug\BaseArchitecture.Repository.Entity.pdb
