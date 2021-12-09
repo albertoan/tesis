@@ -15,7 +15,7 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
         [RequestLoggerFilter]
         [UnControlledExceptionFilterAttribute]
         [Route(IncomeWebApi.MethodApi.Security.Access)]
-        public IHttpActionResult Access()
+        public IHttpActionResult c()
         {
             var urlApi =
                 $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Security}/{IncomeWebApi.MethodApi.Security.Access}";

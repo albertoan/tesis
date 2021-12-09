@@ -156,6 +156,32 @@ namespace BaseArchitecture.Application.Service.Demo
             return result;
         }
 
+        public Response<int> RegInformeCoordinador(InformeCoordinadorRequest informeCoordinadorRequest)
+        {
+            var result = DemoQuery.RegInformeCoordinador(informeCoordinadorRequest);
+            var idProyecto = result.Value;
+
+            //using (var transaction = new TransactionScope())
+            //{
+            //    try
+            //    {
+            //        foreach (var itemOrderDetail in proyectoRequest.ProyectoActividadesRequest)
+            //        {
+            //            DemoTransaction.RegCronograma(itemOrderDetail, idProyecto);
+            //        }
+            //        transaction.Complete();
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        //result = 99;
+            //    }
+            //}
+
+            return result;
+        }
+
+        
+
         public Response<int> RegPerson(PersonRequest personRequest, BaseRecordRequest baseRecordRequest)
         {
             var result = new Response<int>(1);

@@ -368,7 +368,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <textarea class="form-control">
+                            <textarea [(ngModel)]="EvidenciaCommentary"  class="form-control">
                             </textarea>
                         </div>               
                     </div>
@@ -381,7 +381,7 @@
                         </div>
                     </div>
 
-                    <app-file-list [fileList]="answerActionRequest"></app-file-list>
+                    <app-file-list [fileList]="answerActionRequest.AttachedFile"></app-file-list>
 
 
                 </div>

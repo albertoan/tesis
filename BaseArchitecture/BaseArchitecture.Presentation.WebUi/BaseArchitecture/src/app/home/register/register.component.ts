@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
   listProyectosCronogramaOriginal: any [] = [];
   @ViewChild('inputFile') inputFile: ElementRef;
   answerActionRequest: Evidencia = new Evidencia();
-
+  EvidenciaCommentary: string;
   listaTemporal: any [] = [];
   viewCommentary: boolean;
 
@@ -91,11 +91,20 @@ export class RegisterComponent implements OnInit {
   }
 
   registerInformation = () => { 
-    console.log(this.listProyectosCronograma)
+    
+    
+    debugger
 
 
-    this.proyectoInsumosRequest.Actividades
+    this.proyectoInsumosRequest.Actividades = this.listProyectosCronograma;
 
+    
+    this.proyectoInsumosRequest.Evidencia = this.answerActionRequest;
+    this.proyectoInsumosRequest.Evidencia.AttachedFile.forEach(element => {
+      element.FileBase64 ="";
+      element.FileBuffer ="";
+    });
+    // this.
 
     this.serviceProyecto.RegInformeCoordinador(this.proyectoInsumosRequest).subscribe(
       (data: any) => {
@@ -110,25 +119,24 @@ export class RegisterComponent implements OnInit {
     );
 
 
-    this.answerActionRequest.AttachedFile.forEach((element) => {
+    // this.answerActionRequest.AttachedFile.forEach((element) => {
 
-      var params = fileS3.ParamsBucket(
-        environment.bucketSite,
-        element.PathFile,
-        dataURLtoFile(element.FileBase64, element.Name)
-      );
+    //   var params = fileS3.ParamsBucket(
+    //     environment.bucketSite,
+    //     element.PathFile,
+    //     dataURLtoFile(element.FileBase64, element.Name)
+    //   );
 
-      fileS3.UploadS3(params, (err, data) => {
-        if (err) {
-          this.toastr.error('Credenciales expirada, cerrando sesión');
-          console.log(err);
-          SetError();
-          // SignOff();
-          return false;
-        } else return true;
-      });
-   
-});
+    //   fileS3.UploadS3(params, (err, data) => {
+    //     if (err) {
+    //       this.toastr.error('Credenciales expirada, cerrando sesión');
+    //       console.log(err);
+    //       SetError();
+    //       // SignOff();
+    //       return false;
+    //     } else return true;
+    //   });
+    // });
 
   }
 
@@ -161,9 +169,12 @@ export class RegisterComponent implements OnInit {
     reader.onload = function () {
 
       let IdAttachedFile = createGuidRandom();
-      
-      if(_this.answerActionRequest.AttachedFile === undefined)      
+      debugger
+      if(_this.answerActionRequest.AttachedFile == undefined)  {
         _this.answerActionRequest.AttachedFile  =  new Array<AttachedFileRequest>();
+      }    
+        
+      debugger
 
       _this.answerActionRequest.AttachedFile.push(
         {
@@ -181,9 +192,11 @@ export class RegisterComponent implements OnInit {
         }
       );
      _this.inputFile.nativeElement.value = '';
+     debugger
+    //  _this.answerActionRequest.AttachedFile = _this.answerActionRequest.AttachedFile;
     };
 
-    this.answerActionRequest.AttachedFile = _this.answerActionRequest.AttachedFile;
+
 
   };
 

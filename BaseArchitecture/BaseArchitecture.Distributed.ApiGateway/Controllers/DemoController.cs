@@ -348,5 +348,22 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
                 InvokeWebApi.InvokePostAnonymousEntity<Response<List<RptCostoPorTipoProyectoResponse>>>(urlApi, string.Empty);
             return Ok(result);
         }
+
+
+        [HttpPost]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.RegInformeCoordinador)]
+        public IHttpActionResult RegInformeCoordinador( InformeCoordinadorRequest informeCoordinadorRequest)
+        {
+            var postData = Newtonsoft.Json.JsonConvert.SerializeObject(informeCoordinadorRequest);
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.RegInformeCoordinador}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<int>>(urlApi, postData);
+            return Ok(result);
+        }
+
+
     }
 }

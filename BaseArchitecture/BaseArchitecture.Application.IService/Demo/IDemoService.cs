@@ -20,6 +20,7 @@ namespace BaseArchitecture.Application.IService.Demo
         Response<List<ProgramacionResponse>> ListProgramacion();
         Response<int> RegProgramacion(ProgramacionRequest programacionRequest);
         Response<int> RegProyecto(ProyectoRequest proyectoRequest);
+        Response<int> RegInformeCoordinador(InformeCoordinadorRequest informeCoordinadorRequest);
         Response<ProyectoResponse> GetProyectoById(ProyectoRequest proyectoRequest);
         Response<ProyectoResponse> GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest);
         Response<PersonResponse> GetPersonById(PersonBaseRequest personBaseRequest);

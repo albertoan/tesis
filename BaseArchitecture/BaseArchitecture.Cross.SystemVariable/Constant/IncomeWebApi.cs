@@ -54,6 +54,7 @@
                 public const string RptCantidadProyectosPorTipoProyecto = "RptCantidadProyectosPorTipoProyecto";
                 public const string RptCostoPorDepartamento = "RptCostoPorDepartamento";
                 public const string RptCostoPorTipoProyecto = "RptCostoPorTipoProyecto";
+                public const string RegInformeCoordinador = "RegInformeCoordinador"; 
             }
         }
 

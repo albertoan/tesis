@@ -262,5 +262,15 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
             var result = DemoService.RptCostoPorTipoProyecto();
             return Ok(result);
         }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.RegInformeCoordinador)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult RegInformeCoordinador(InformeCoordinadorRequest informeCoordinadorRequest)
+        {
+            var result = DemoService.RegInformeCoordinador(informeCoordinadorRequest);
+            return Ok(result);
+        }
     }
 }

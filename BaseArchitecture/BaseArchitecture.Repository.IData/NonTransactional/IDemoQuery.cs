@@ -18,6 +18,7 @@ namespace BaseArchitecture.Repository.IData.NonTransactional
         IEnumerable<ProgramacionResponse> ListProgramacion();
         Response<int> RegProgramacion(ProgramacionRequest programacionRequest);
         Response<int> RegProyecto(ProyectoRequest proyectoRequest);
+        Response<int> RegInformeCoordinador(InformeCoordinadorRequest informeCoordinadorRequest); 
         Response<ProyectoResponse> GetProyectoById(ProyectoRequest proyectoRequest);
         Response<ProyectoResponse> GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest);
         Response<OffLineInformeResponse> ListProyectoInforme();

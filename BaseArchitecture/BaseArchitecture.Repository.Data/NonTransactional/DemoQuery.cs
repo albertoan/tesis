@@ -384,11 +384,75 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
                     parametersUpdate.Add("@Cableado", proyectoRequest.Insumos.Cableado);
                     parametersUpdate.Add("@TipoRegistro", proyectoRequest.Insumos.TipoRegistro);
                     parametersUpdate.Add("@TipoObra", proyectoRequest.Insumos.TipoObra);
+
                     resultUpdate = connection.Execute(
                     $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RegInsumos}",
                     parametersUpdate,
                     commandType: CommandType.StoredProcedure);
+
                 }
+            }
+            return response;
+        }
+
+        public Response<int> RegInformeCoordinador(InformeCoordinadorRequest informeCoordinadorRequest)
+        {
+            Response<int> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parametersUpdate = new DynamicParameters();
+                parametersUpdate.Add("@IdInsumoObra", informeCoordinadorRequest.IdInsumoObra);
+                parametersUpdate.Add("@IdProyecto", informeCoordinadorRequest.IdProyecto);
+                parametersUpdate.Add("@MaderaTipoA", informeCoordinadorRequest.MaderaTipoA);
+                parametersUpdate.Add("@MaderaTipoB", informeCoordinadorRequest.MaderaTipoB);
+                parametersUpdate.Add("@Concreto", informeCoordinadorRequest.Concreto);
+                parametersUpdate.Add("@Aluminio", informeCoordinadorRequest.Aluminio);
+                parametersUpdate.Add("@PIN3", informeCoordinadorRequest.PIN3);
+                parametersUpdate.Add("@PIN4", informeCoordinadorRequest.PIN4);
+                parametersUpdate.Add("@Suspencion", informeCoordinadorRequest.Suspencion);
+                parametersUpdate.Add("@PAT1", informeCoordinadorRequest.PAT1);
+                parametersUpdate.Add("@PAT2", informeCoordinadorRequest.PAT2);
+                parametersUpdate.Add("@Pernos", informeCoordinadorRequest.Pernos);
+                parametersUpdate.Add("@Abrazaderas", informeCoordinadorRequest.Abrazaderas);
+                parametersUpdate.Add("@Aisladores", informeCoordinadorRequest.Aisladores);
+                parametersUpdate.Add("@Monofasicos", informeCoordinadorRequest.Monofasicos);
+                parametersUpdate.Add("@Bifasicos", informeCoordinadorRequest.Bifasicos);
+                parametersUpdate.Add("@Trifasicos", informeCoordinadorRequest.Trifasicos);
+                parametersUpdate.Add("@Transformadores", informeCoordinadorRequest.Transformadores);
+                parametersUpdate.Add("@Interruptores", informeCoordinadorRequest.Interruptores);
+                parametersUpdate.Add("@Contactores", informeCoordinadorRequest.Contactores);
+                parametersUpdate.Add("@Medidores", informeCoordinadorRequest.Medidores);
+                parametersUpdate.Add("@Fusibles", informeCoordinadorRequest.Fusibles);
+                parametersUpdate.Add("@Pararrayos", informeCoordinadorRequest.Pararrayos);
+                parametersUpdate.Add("@Lotes", informeCoordinadorRequest.Lotes);
+                parametersUpdate.Add("@MaderaSecundarioTipoA", informeCoordinadorRequest.MaderaSecundarioTipoA);
+                parametersUpdate.Add("@ConcretoSecundarioTipoA", informeCoordinadorRequest.ConcretoSecundarioTipoA);
+                parametersUpdate.Add("@ConcretoSecundarioTipoB", informeCoordinadorRequest.ConcretoSecundarioTipoB);
+                parametersUpdate.Add("@AluminioSecundario", informeCoordinadorRequest.AluminioSecundario);
+                parametersUpdate.Add("@Alumbrado", informeCoordinadorRequest.Alumbrado);
+                parametersUpdate.Add("@Retenidas", informeCoordinadorRequest.Retenidas);
+                parametersUpdate.Add("@PuestaTierra", informeCoordinadorRequest.PuestaTierra);
+                parametersUpdate.Add("@GrapaSuspencion", informeCoordinadorRequest.GrapaSuspencion);
+                parametersUpdate.Add("@GrapaAnclaje", informeCoordinadorRequest.GrapaAnclaje);
+                parametersUpdate.Add("@PernosSecundarios", informeCoordinadorRequest.PernosSecundarios);
+                parametersUpdate.Add("@Conexiones", informeCoordinadorRequest.Conexiones);
+                parametersUpdate.Add("@PanelesSolares", informeCoordinadorRequest.PanelesSolares);
+                parametersUpdate.Add("@Celdas", informeCoordinadorRequest.Celdas);
+                parametersUpdate.Add("@Inversor", informeCoordinadorRequest.Inversor);
+                parametersUpdate.Add("@Soporte", informeCoordinadorRequest.Soporte);
+                parametersUpdate.Add("@Estructura", informeCoordinadorRequest.Estructura);
+                parametersUpdate.Add("@Cableado", informeCoordinadorRequest.Cableado);
+                parametersUpdate.Add("@TipoRegistro", informeCoordinadorRequest.TipoRegistro);
+                parametersUpdate.Add("@TipoObra", informeCoordinadorRequest.TipoObra);
+
+                var result = connection.QueryAsync<int>(
+                $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RegInformeCoordinador}",
+                parametersUpdate,
+                commandType: CommandType.StoredProcedure).Result;
+
+                response = new Response<int>(result.FirstOrDefault());
+
             }
             return response;
         }

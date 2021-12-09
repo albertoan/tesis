@@ -53,6 +53,7 @@
             public const string RptCantidadProyectosPorTipoProyecto = "USP_RPT_CantidadProyectosPorTipoProyecto";
             public const string RptCostoPorDepartamento = "USP_RPT_CostoPorDepartamento";
             public const string RptCostoPorTipoProyecto = "USP_RPT_CostoPorTipoProyecto";
+            public const string RegInformeCoordinador = "USP_REG_InformeCoordinador"; 
         }
     }
 }

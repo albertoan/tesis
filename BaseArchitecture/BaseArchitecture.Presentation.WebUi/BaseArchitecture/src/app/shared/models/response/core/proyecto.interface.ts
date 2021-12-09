@@ -100,30 +100,30 @@ export class ProyectoActividades {
 }
   
 export class Actividades {
-	IdCronograma: string;
-	Orden: string;
-	Idproyecto: string;
-	Nombre: string;
-	FechaInicio: string;
-	FechaFin: string;
-	Seguimiento: string;
-	Estado: string;
-	FechaRegistro: string;
+	IdCronograma?: string;
+	Orden?: string;
+	Idproyecto?: string;
+	Nombre?: string;
+	FechaInicio?: string;
+	FechaFin?: string;
+	Seguimiento?: string;
+	Estado?: string;
+	FechaRegistro?: string;
 }
   
 export class Evidencia {
-  IdEvidencia: string;
+  IdEvidencia?: string;
   Codigo?: string;
-  IdProyecto: string;
-  Evidencia: string;
-  AttachedFile: AttachedFileRequest [];
+  IdProyecto?: string;
+  Evidencia?: string;
+  AttachedFile?: AttachedFileRequest [];
 }
 
 export class AttachedFileRequest
 {
-  IdProyecto: string;
-  IdAttachedFile: string;
-  Name: string;
+  IdProyecto?: string;
+  IdAttachedFile?: string;
+  Name?: string;
   PathFile: string;  
   FileBase64?: string | ArrayBuffer;
   FileBuffer?: string;
