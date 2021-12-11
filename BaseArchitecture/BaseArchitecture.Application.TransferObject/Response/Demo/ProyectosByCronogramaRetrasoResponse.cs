@@ -15,8 +15,11 @@ namespace BaseArchitecture.Application.TransferObject.Response.Demo
         public string Estado { set; get; }
         public string FechaDesde { set; get; }
         public string FechaHasta { set; get; }
+        public string FechaUltimoRegistro { set; get; }
+        
     }
 }
+
 
 
 
