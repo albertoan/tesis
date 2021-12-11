@@ -100,6 +100,7 @@
     <Compile Include="Response\Demo\ProvinciaResponse.cs" />
     <Compile Include="Response\Demo\ProyectoActividadesResponse.cs" />
     <Compile Include="Response\Demo\ProyectoResponse.cs" />
+    <Compile Include="Response\Demo\ProyectosByCronogramaRetrasoResponse.cs" />
     <Compile Include="Response\Demo\UbigeoResponse.cs" />
     <Compile Include="Response\Demo\ZonasResponse.cs" />
   </ItemGroup>

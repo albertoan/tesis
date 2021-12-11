@@ -59,6 +59,7 @@
             public const string RegInformeCoordinador = "USP_REG_InformeCoordinador";
             public const string RegAttachedFile = "USP_REG_AttachedFile";
             public const string ListCumplimientobyProyecto = "USP_LIST_CumplimientobyProyecto";
+            public const string ListProyectosByCronogramaRetraso = "USP_LIST_ProyectosByCronogramaRetraso";
         }
     }
 }

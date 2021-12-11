@@ -458,5 +458,16 @@ namespace BaseArchitecture.Application.Service.Demo
             return response;
 
         }
+
+        public Response<List<ProyectosByCronogramaRetrasoResponse>> ListProyectosByCronogramaRetraso()
+        {
+            var result = DemoQuery.ListProyectosByCronogramaRetraso().ToList();
+
+            var response = new Response<List<ProyectosByCronogramaRetrasoResponse>>()
+            {
+                Value = result
+            };
+            return response;
+        }
     }
 }

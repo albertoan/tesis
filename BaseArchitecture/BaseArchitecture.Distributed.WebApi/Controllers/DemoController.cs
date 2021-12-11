@@ -311,5 +311,15 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
             var result = DemoService.ListPersonal();
             return Ok(result);
         }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListProyectosByCronogramaRetraso)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult ListProyectosByCronogramaRetraso()
+        {
+            var result = DemoService.ListProyectosByCronogramaRetraso();
+            return Ok(result);
+        }
     }
 }

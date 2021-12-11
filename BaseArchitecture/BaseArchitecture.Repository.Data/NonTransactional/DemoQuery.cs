@@ -658,5 +658,24 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
             }
             return response;
         }
+
+        public IEnumerable<ProyectosByCronogramaRetrasoResponse> ListProyectosByCronogramaRetraso()
+        {
+            IEnumerable<ProyectosByCronogramaRetrasoResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();                
+
+                var resultResponse = connection.QueryAsync<ProyectosByCronogramaRetrasoResponse>(
+                $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.ListProyectosByCronogramaRetraso}",
+                parameters,
+                commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
+
     }
 }

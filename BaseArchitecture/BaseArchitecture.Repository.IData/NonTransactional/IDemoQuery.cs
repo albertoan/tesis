@@ -33,5 +33,6 @@ namespace BaseArchitecture.Repository.IData.NonTransactional
         IEnumerable<RptCostoPorDepartamentoResponse> RptCostoPorDepartamento();
         IEnumerable<RptCostoPorTipoProyectoResponse> RptCostoPorTipoProyecto();
         IEnumerable<PersonalResponse> ListPersonal();
+        IEnumerable<ProyectosByCronogramaRetrasoResponse> ListProyectosByCronogramaRetraso();
     }
 }

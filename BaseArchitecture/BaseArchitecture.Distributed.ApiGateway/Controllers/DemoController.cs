@@ -418,5 +418,18 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
             return Ok(result);
         }
 
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListProyectosByCronogramaRetraso)]
+        public IHttpActionResult ListProyectosByCronogramaRetraso()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.ListProyectosByCronogramaRetraso}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<ProyectosByCronogramaRetrasoResponse>>>(urlApi, string.Empty);
+            return Ok(result);
+        }
+
     }
 }
