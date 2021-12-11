@@ -79,13 +79,11 @@ export class EditProyectoComponent implements OnInit {
 
       this.serviceProyecto.GetListProyectoByIdProyecto(this.proyectoItemRequest).subscribe(
         (data: any) => {
-          debugger
           this.proyectoResponse = data.Value;
           this.insumos = data.Value.ListInsumosResponse[0]=== undefined? this.insumos:data.Value.ListInsumosResponse[0];
           this.listSchedules = data.Value.ListCronogramaResponse;
           this.SinceDate= this.proyectoResponse.FechaDesde;//(new Date(this.proyectoResponse.FechaDesde +' 05:00:00')).toString();
           this.UntilDate= this.proyectoResponse.FechaHasta;//(new Date(this.proyectoResponse.FechaHasta +' 05:00:00')).toString();
-          //this.listSchedules = 
           this.loadProvincia(this.proyectoResponse.IdDepartamento);
           this.loadDistrito(this.proyectoResponse.IdProvincia);    
           this.selectTipoProyecto(this.proyectoResponse.IdTipoProyecto);    
@@ -260,7 +258,6 @@ export class EditProyectoComponent implements OnInit {
         return
       }
 
-      debugger
       this.proyectoResponse.FechaDesde = this.SinceDate != this.proyectoResponse.FechaDesde ? this.datepipe.transform(this.SinceDate, 'dd/MM/yyyy'):this.SinceDate ;
       this.proyectoResponse.FechaHasta = this.UntilDate != this.proyectoResponse.FechaHasta ? this.datepipe.transform(this.UntilDate, 'dd/MM/yyyy'):this.UntilDate ;
       this.proyectoResponse.Estado = "1";

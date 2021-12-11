@@ -8,7 +8,7 @@ import { AutorizacionService } from './autorizacion.service';
 import { LoginRequest } from '../../models/request/authentication/authentication-request.interface';
 import { LoginResponse } from '../../models/response/authentication/authentication-response.interface';
 import { AccessResponse } from '../../models/response/authentication/authentication-response.interface';
-import { Proyecto, Programacion, ProyectoId, ProyectoActividades, Insumos } from '../../models/response/core/proyecto.interface';
+import { Proyecto, Programacion, ProyectoId, ProyectoActividades, Insumos, Personal } from '../../models/response/core/proyecto.interface';
 
 @Injectable({ providedIn: 'root' })
 export class GeneralService {
@@ -47,6 +47,16 @@ export class GeneralService {
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   }
 
+  
+  ListPersonal(): Observable<any> {
+    return this.http
+      .get<any>(
+        this.urlWebApi + Path.Siscose + Siscose.ListPersonal
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+  
+
   ListMaster(): Observable<any> {
     return this.http
       .get<any>(
@@ -54,6 +64,43 @@ export class GeneralService {
       )
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   }
+  
+
+  RptCantidadPoblacionPorDepartamento(): Observable<any>{
+    return this.http
+      .get<any>(this.urlWebApi + Path.Siscose + Siscose.RptCantidadPoblacionPorDepartamento,
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
+  RptCantidadProyectosPorCicloInversion(): Observable<any>{
+    return this.http
+      .get<any>(this.urlWebApi + Path.Siscose + Siscose.RptCantidadProyectosPorCicloInversion,
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
+  RptCantidadProyectosPorTipoProyecto(): Observable<any>{
+    return this.http
+      .get<any>(this.urlWebApi + Path.Siscose + Siscose.RptCantidadProyectosPorTipoProyecto,
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
+  RptCostoPorDepartamento(): Observable<any>{
+    return this.http
+      .get<any>(this.urlWebApi + Path.Siscose + Siscose.RptCostoPorDepartamento,
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
+  RptCostoPorTipoProyecto(): Observable<any>{
+    return this.http
+      .get<any>(this.urlWebApi + Path.Siscose + Siscose.RptCostoPorTipoProyecto,
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
 
   ListUBIGEO = (): Observable<any> => {
     return this.http
@@ -120,6 +167,15 @@ export class GeneralService {
       )
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   }
+  RegPersonal(personal: Personal): Observable<any> {
+    return this.http
+      .post<any>(
+        this.urlWebApi + Path.Siscose + Siscose.RegPersonal,
+        personal
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
 
   RegInformeCoordinador(proyectoInsumosRequest: Insumos): Observable<any> {
     return this.http
@@ -129,6 +185,19 @@ export class GeneralService {
       )
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   }
+
+  ListCumplimientobyProyecto(proyecto): Observable<ProyectoId> {
+    return this.http
+      .get<Proyecto>(
+        this.urlWebApi + Path.Siscose + Siscose.ListCumplimientobyProyecto,
+        {
+          observe: 'body',
+          params: { cronogramaRequest: JSON.stringify(proyecto) },
+        }
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  }
+
 
   ListProyectoInforme = (): Observable<any> => {
     return this.http
@@ -182,4 +251,16 @@ export class GeneralService {
       )
       .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
   };
+
+  ListPersonalRpt = (): Observable<any> => {
+    return this.http
+      .get<any>(
+        environment.serverUriApi +  Path.Siscose + Siscose.ListPersonalRpt,
+        {
+          observe: 'body',
+        }
+      )
+      .pipe(retry(0), catchError(this.autorizacionService.errorHandl));
+  };
+   
 }

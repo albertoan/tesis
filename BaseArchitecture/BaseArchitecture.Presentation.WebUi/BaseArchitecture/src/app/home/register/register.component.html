@@ -1,3 +1,20 @@
+
+
+      <div class="ml-status-bar">       
+        <div class="ml-status-bar-elements"> 
+        <span class="row" *ngFor="let item of listaMostrar">   
+                        
+          <span [ngClass]="{'proccessed':item.Seguimiento}"  class="ml-status-circle fa">    
+            <h6 class="current" style="margin-top: -40px;" > {{ item.DateOrderFlowSTtring }}</h6>    
+            <h6 class="current" [ngStyle]="{'margin-top':item.Seguimiento ? '30px' : '70px' }"> {{ item.DescriptionStatus }}</h6>              
+          </span>             
+          
+          <!-- <span *ngIf="item.OrderStatus != '7'" [ngClass]="{'proccessed':item.FlagStatus}" class="ml-status-connector"></span>
+          <span *ngIf="item.OrderStatus != '7'"  [ngClass]="{'proccessed':item.FlagStatus}" class="ml-status-connector"></span> -->
+        </span>
+        </div>
+      </div>  
+
 <ng-container *ngIf="deviceType == 'M'">  
     <div class="container row col-md-12" style="margin-top: 10px;">
         <div class="col-10">
@@ -21,6 +38,18 @@
                     [typeaheadScrollable]="true" name="listEmployee" [typeaheadOptionsInScrollableView]="5"
                     [isAnimated]="true" autocomplete="off" [adaptivePosition]="true"
                     typeaheadOptionField="Codigo" (typeaheadOnSelect)="typeaheadOnSelectEmployee($event)" />
+                </div>
+
+            </div>
+            <br>
+            <div *ngIf="existeLocation" class="row" style="text-align: center;">
+                <div class="col-md-12">
+                    <label style="font-weight: bold;">
+                        Longitud:
+                    </label>  {{ longitudeRequestLabel }} &nbsp;&nbsp;&nbsp;
+                    <label style="font-weight: bold;">
+                        Latitud: 
+                    </label> {{ latitudeRequestLabel }}
                 </div>
             </div>
             <br>
@@ -144,7 +173,7 @@
                         </div>
                         <div class="row">
                             <div class="col-5">
-                                <label> Suspención: ({{proyectoInsumos.Suspencion}})</label>
+                                <label> Suspension: ({{proyectoInsumos.Suspencion}})</label>
                             </div>
                             <div class="col-3">
                                 <input [(ngModel)]="proyectoInsumosRequest.Suspencion" class="form-control">
@@ -347,13 +376,6 @@
                                 </select>
                             </div>  
                         </div> 
-
-                        <!-- <div class="row" *ngIf="viewCommentary"> 
-                            <div class="col-12" style="text-align: justify;">
-                                <input [(ngModel)]="item.Commentary" class="form-control">
-                            </div>  
-                        </div>  -->
-
                     </div>
                 </div>
             </div>
@@ -375,8 +397,18 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <label for="fileUploadS3">Adjuntar Archivo</label>
-                                <input #inputFile (change)="fileUpload($event)" type="file" class="form-control-file" id="fileUploadS3">
+                                <!-- <label for="fileUploadS3">Adjuntar Archivo</label> -->
+                                <br>
+                                <input #inputFile (change)="fileUpload($event)" type="file" style="color: transparent" class="form-control-file" id="fileUploadS3">
+
+                                <!-- <input #inputFile (change)="fileUpload($event)" id="fileUploadS3" type="file">
+                              
+                                <label style="background-color: #0c54ac; height: 50px; width: 5px; border-radius: 50px;" class="btn-1"
+                                for="file"> <em class="fas fa-camera" style="margin-left: -22px; font-size: 25px; margin-top: -1px;"></em>
+                                </label> -->
+                             
+
+
                             </div>
                         </div>
                     </div>

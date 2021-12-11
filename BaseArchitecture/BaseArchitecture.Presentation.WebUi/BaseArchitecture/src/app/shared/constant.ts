@@ -23,12 +23,21 @@ export const Siscose = {
   RegProgramacion: 'RegProgramacion',
   ListMaster: 'ListMaster',
   RegProyecto: 'RegProyecto',
+  RegPersonal: 'RegPersonal',
+  ListPersonal:'ListPersonal',
   ListProyectoInforme: 'ListProyectoInforme',
   ListProyectoCronograma: 'ListProyectoCronograma',
   RegCronograma: 'RegCronograma',
   ListMenu: 'ListMenu',
   ListProyectosRpt: 'ListProyectosRpt',
+  ListPersonalRpt:'ListPersonalRpt',
   RegInformeCoordinador: 'RegInformeCoordinador',
+  RptCantidadPoblacionPorDepartamento: 'RptCantidadPoblacionPorDepartamento',
+  RptCantidadProyectosPorCicloInversion: 'RptCantidadProyectosPorCicloInversion',
+  RptCantidadProyectosPorTipoProyecto: 'RptCantidadProyectosPorTipoProyecto',
+  RptCostoPorDepartamento: 'RptCostoPorDepartamento',
+  RptCostoPorTipoProyecto: 'RptCostoPorTipoProyecto',
+  ListCumplimientobyProyecto: 'ListCumplimientobyProyecto',
 };
 
 export const KeyObjectSoreName = {
@@ -49,6 +58,7 @@ export const MediaType = {
 
 export const FileNameExcel = {
   ListProjectExcel: 'ListProyectos.xlsx',
+  ListPersonalExcel: 'ListPersonal.xlsx',
 };
 
 export const DBName = {

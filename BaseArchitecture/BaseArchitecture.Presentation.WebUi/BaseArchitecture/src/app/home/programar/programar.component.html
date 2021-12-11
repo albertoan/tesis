@@ -46,12 +46,7 @@
                 </label>
             </div>
             <div class="col-md-9">
-                <!-- <input type="text" class="form-control" [typeahead]="listPersonal" [(ngModel)]="selectedPersonal"
-                [typeaheadScrollable]="true" name="listPersonal" [typeaheadOptionsInScrollableView]="5"
-                [isAnimated]="true" autocomplete="off" [adaptivePosition]="true"
-                typeaheadOptionField="NombreCompleto" (typeaheadOnSelect)="typeaheadOnSelectEmployee($event)" /> -->
-
-                <select [(ngModel)]="selectedPersonal"  class="form-control">
+                <select (change)="typeaheadOnSelectEmployee($event.target.value)" [(ngModel)]="selectedPersonal"  class="form-control">
                     <option value="">-- Seleccione --</option>
                     <option value="{{item.IdCoordinador}}" *ngFor="let item of listPersonal">{{ item.NombreCompleto }}</option>
                 </select> 

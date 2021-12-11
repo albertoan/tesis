@@ -92,5 +92,82 @@ namespace BaseArchitecture.Repository.Data.Transactional
 
             return response;
         }
+        public Response<int> RegCronogramaCoordinador(ProyectoActividadesRequest proyectoActividadesRequest)
+        {
+            Response<int> response;
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@IdCronograma", proyectoActividadesRequest.IdCronograma);
+                parameters.Add("@Idproyecto", proyectoActividadesRequest.Idproyecto);
+                parameters.Add("@Orden", proyectoActividadesRequest.Orden);
+                parameters.Add("@Nombre", proyectoActividadesRequest.Nombre);
+                parameters.Add("@FechaInicio", proyectoActividadesRequest.FechaInicio);
+                parameters.Add("@FechaFin", proyectoActividadesRequest.FechaFin);
+                parameters.Add("@Seguimiento", proyectoActividadesRequest.Seguimiento);
+                parameters.Add("@Estado", proyectoActividadesRequest.Estado);
+
+                var result = connection.QueryAsync<int>(
+                    $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RegCronograma}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = new Response<int>(result.FirstOrDefault());
+            }
+
+            return response;
+        }
+
+        public Response<int> RegAttachedFile(AttachedFile attachedFile)
+        {
+            Response<int> response;
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@IdAttachedFile", attachedFile.IdAttachedFile);
+                parameters.Add("@FileBase64", attachedFile.FileBase64);
+                parameters.Add("@FileBuffer", attachedFile.FileBuffer);
+                parameters.Add("@IdProyecto", attachedFile.IdProyecto);
+                parameters.Add("@Name", attachedFile.Name);
+                parameters.Add("@PathFile", attachedFile.PathFile);
+
+                var result = connection.QueryAsync<int>(
+                    $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RegAttachedFile}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = new Response<int>(result.FirstOrDefault());
+            }
+
+            return response;
+        }
+
+        public Response<int> RegPersonal(PersonalRequest personalRequest)
+        {
+            Response<int> response;
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@ParamIIdCoordinador", personalRequest.IdCoordinador);
+                parameters.Add("@ParamINombre", personalRequest.Nombre);
+                parameters.Add("@ParamIApellidoPaterno", personalRequest.ApellidoPaterno);
+                parameters.Add("@ParamIApellidoMaterno", personalRequest.ApellidoMaterno);
+                parameters.Add("@ParamICorreo", personalRequest.Correo);
+                parameters.Add("@ParamITelefono", personalRequest.Telefono);
+                parameters.Add("@ParamIEstado", personalRequest.Estado);
+                parameters.Add("@ParamIIdZona", personalRequest.IdZona);
+                parameters.Add("@ParamIAsignado", personalRequest.Asignado);
+                parameters.Add("@ParamICargo", personalRequest.Cargo);
+
+                var result = connection.Execute(
+                    $"{IncomeDataProcedures.Schema.Cnfg}.{IncomeDataProcedures.Procedure.RegPersonal}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure);
+
+                response = new Response<int>(result);
+            }
+
+            return response;
+        }
     }
 }

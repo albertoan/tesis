@@ -23,6 +23,7 @@ namespace BaseArchitecture.Application.IService.Demo
         Response<int> RegInformeCoordinador(InformeCoordinadorRequest informeCoordinadorRequest);
         Response<ProyectoResponse> GetProyectoById(ProyectoRequest proyectoRequest);
         Response<ProyectoResponse> GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest);
+        Response<List<CronogramaResponse>> ListCumplimientobyProyecto(CronogramaRequest proyectoRequest);
         Response<PersonResponse> GetPersonById(PersonBaseRequest personBaseRequest);
         Response<int> UpdPersonState(PersonBaseRequest personBaseRequest, BaseRecordRequest baseRecordRequest);
         Response<int> RegPerson(PersonRequest personRequest, BaseRecordRequest baseRecordRequest);
@@ -35,5 +36,8 @@ namespace BaseArchitecture.Application.IService.Demo
         Response<List<RptCantidadProyectosPorTipoProyectoResponse>> RptCantidadProyectosPorTipoProyecto();
         Response<List<RptCostoPorDepartamentoResponse>> RptCostoPorDepartamento();
         Response<List<RptCostoPorTipoProyectoResponse>> RptCostoPorTipoProyecto();
+        Response<int> RegPersonal(PersonalRequest personalRequest);
+        Response<List<PersonalResponse>> ListPersonal();
+        Response<byte[]> ListPersonalRpt();
     }
 }

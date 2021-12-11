@@ -77,6 +77,8 @@ export class Insumos {
 	Cableado: string;
   	TipoRegistro: string;
 	TipoObra: string;
+	Longitud: string;
+	Latitud: string;
 	Actividades?: Actividades[];
 	Evidencia?: Evidencia;
 }
@@ -119,6 +121,25 @@ export class Evidencia {
   AttachedFile?: AttachedFileRequest [];
 }
 
+export class RegistroTemperaturaRequest {
+	DniEmpleado: string;
+	IdTemperature: number;
+	Temperature: number;
+	Latitude: number;
+	Longitude: number;
+	MeasurementDateString: Date;
+	Usuario: string;
+	Accion: string;
+	Token: string;
+	User: string;
+	UserEdit: string;
+	EmployedId: string;
+	Title: string;
+	Status: string;
+	CodeAntamina: string;
+	CodeLocation: string;
+  }
+
 export class AttachedFileRequest
 {
   IdProyecto?: string;
@@ -127,4 +148,19 @@ export class AttachedFileRequest
   PathFile: string;  
   FileBase64?: string | ArrayBuffer;
   FileBuffer?: string;
+}
+
+
+export class Personal
+{
+	IdCoordinador: string;
+	Nombre: string;
+	ApellidoPaterno: string;
+	ApellidoMaterno: string;  
+	Correo: string ;
+	Telefono: string;
+	Estado: string;
+	IdZona: string;
+	Asignado: string;
+	Cargo: string;	
 }

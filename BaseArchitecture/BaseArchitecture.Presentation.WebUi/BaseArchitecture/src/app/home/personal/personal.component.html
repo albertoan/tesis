@@ -1,25 +1,24 @@
 <div class="container row" style="margin-top: 10px;">
     <div  class="col-md-8">
         <p style="text-align: left; font-size: 16px; font-weight: bold;margin-bottom: 0;">
-            Cartera de Proyectos
+            Mantenedor de Personal
         </p>
     </div>
     <div class="col-md-2" style="text-align: end;">
         <button (click)="exportExcel()" type="button" class="btn btn-primary" ><em class="fas fa-file-excel"></em> Exportar Excel </button>
     </div>
     <div class="col-md-2" style="text-align: end;">
-        <button (click)="registerProject()" type="button" class="btn btn-success" ><em class="fas fa-plus"></em> Nuevo Proyecto </button>
+        <button (click)="registerProject()" type="button" class="btn btn-success" ><em class="fas fa-plus"></em> Nuevo Persona </button>
     </div>
 </div>
         
 <br>
 <div class="container">
     <div class="kt-portlet__body">
-        <app-table [data]="listProyectos" 
+        <app-table [data]="listPersonal" 
             [configTable]="configTable"
             [totalItems]="totalItems"
             [headers]="headers"
-            (edit)="viewDetail($event)"
             (edit2)="editDetail($event)">
         </app-table>
     </div>

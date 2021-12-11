@@ -10,11 +10,11 @@ import { Base64toBlob } from 'src/app/shared/util';
 import { FileNameExcel, MediaType } from 'src/app/shared/constant';
 
 @Component({
-  selector: 'app-cartera',
-  templateUrl: './cartera.component.html',
-  styleUrls: ['./cartera.component.css']
+  selector: 'app-supervisar',
+  templateUrl: './supervisar.component.html',
+  styleUrls: ['./supervisar.component.css']
 })
-export class CarteraComponent implements OnInit {
+export class SupervisarComponent implements OnInit {
 
     public labelJson: ResponseLabel = new ResponseLabel();
     deviceType: string;
@@ -37,7 +37,6 @@ export class CarteraComponent implements OnInit {
       this.spinner.show();
       this.createHeadersTable();
       this.loadStart();
-      this.deviceType = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) ? 'M':'D';
       this.ListProyectos();
     }
 

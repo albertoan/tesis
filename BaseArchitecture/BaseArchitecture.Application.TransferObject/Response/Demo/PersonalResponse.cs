@@ -11,5 +11,12 @@
 		public string Telefono { set; get; }
 		public string Estado { set; get; }
 		public string IdZona { set; get; }
+		public string Asignado { set; get; }
+		public string Cargo { set; get; }
+		public string EstadoDes { set; get; }
+		public string IdZonaDes { set; get; }
+		public string AsignadoDes { set; get; }
+		public string CargoDes { set; get; }
+
 	}
 }

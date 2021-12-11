@@ -61,7 +61,6 @@ export class ProcessClaimsComponent implements OnInit {
             window.location.replace(environment.urlLogin);
           }, 4000);
         } else {
-          debugger
           const userModel: Login = new Login();
           userModel.User = data.Value.User;
           userModel.UserEdit = data.Value.UserEdit;
@@ -126,7 +125,6 @@ export class ProcessClaimsComponent implements OnInit {
   saveDataIndex = () =>{
     this.serviceProyecto.ListProyectoInforme().subscribe(
       (data) => {
-        debugger
         let proyectoInformeCronograma = {
           codProyectoInformeCronograma: 'GetProyectoInformeCronograma',
           body: encrypt(JSON.stringify(data.Value.ListInformeCronograma)),

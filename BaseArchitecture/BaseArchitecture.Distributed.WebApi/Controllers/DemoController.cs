@@ -115,6 +115,16 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListCumplimientobyProyecto)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult ListCumplimientobyProyecto(CronogramaRequest cronogramaRequest)
+        {
+            var result = DemoService.ListCumplimientobyProyecto(cronogramaRequest);
+            return Ok(result);
+        }
+
+        [HttpPost]
         [Route(IncomeWebApi.MethodApi.Siscose.ListProyectoCodigo)]
         [RequestLoggerFilterAttribute]
         [UnControlledExceptionFilterAttribute]
@@ -214,6 +224,16 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
         }
 
         [HttpPost]
+        [RequestLoggerFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListPersonalRpt)]
+        public IHttpActionResult ListPersonalRpt()
+        {
+            var answerActionPendingsExcel = DemoService.ListPersonalRpt();
+            return Ok(answerActionPendingsExcel);
+        }
+
+
+        [HttpPost]
         [Route(IncomeWebApi.MethodApi.Siscose.RptCantidadPoblacionPorDepartamento)]
         [RequestLoggerFilterAttribute]
         [UnControlledExceptionFilterAttribute]
@@ -270,6 +290,25 @@ namespace BaseArchitecture.Distributed.WebApi.Controllers
         public IHttpActionResult RegInformeCoordinador(InformeCoordinadorRequest informeCoordinadorRequest)
         {
             var result = DemoService.RegInformeCoordinador(informeCoordinadorRequest);
+            return Ok(result);
+        }
+    
+        [Route(IncomeWebApi.MethodApi.Demo.RegPersonal)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult RegPersonal(PersonalRequest personalRequest)
+        {
+            var result = DemoService.RegPersonal(personalRequest);
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListPersonal)]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        public IHttpActionResult ListPersonal()
+        {
+            var result = DemoService.ListPersonal();
             return Ok(result);
         }
     }

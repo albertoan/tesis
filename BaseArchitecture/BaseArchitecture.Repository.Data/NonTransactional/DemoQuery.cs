@@ -145,6 +145,25 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
             return response;
         }
 
+        public IEnumerable<CronogramaResponse> ListCumplimientobyProyecto(CronogramaRequest cronogramaRequest)
+        {
+            IEnumerable<CronogramaResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@ParamIIdProyecto", cronogramaRequest.IdProyecto);
+
+                var resultResponse = connection.QueryAsync<CronogramaResponse>(
+                $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.ListCumplimientobyProyecto}",
+                parameters,
+                commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
+
 
         public IEnumerable<PersonResponse> ListPersonAll(PersonFilterRequest personFilterRequest)
         {
@@ -445,6 +464,8 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
                 parametersUpdate.Add("@Cableado", informeCoordinadorRequest.Cableado);
                 parametersUpdate.Add("@TipoRegistro", informeCoordinadorRequest.TipoRegistro);
                 parametersUpdate.Add("@TipoObra", informeCoordinadorRequest.TipoObra);
+                parametersUpdate.Add("@Longitud", informeCoordinadorRequest.Longitud);
+                parametersUpdate.Add("@Latitud", informeCoordinadorRequest.Latitud);
 
                 var result = connection.QueryAsync<int>(
                 $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RegInformeCoordinador}",
@@ -614,6 +635,22 @@ namespace BaseArchitecture.Repository.Data.NonTransactional
                 var parameters = new DynamicParameters();
                 var resultResponse = connection.QueryAsync<RptCostoPorTipoProyectoResponse>(
                     $"{IncomeDataProcedures.Schema.Core}.{IncomeDataProcedures.Procedure.RptCostoPorTipoProyecto}",
+                    parameters,
+                    commandType: CommandType.StoredProcedure).Result;
+
+                response = resultResponse;
+            }
+            return response;
+        }
+        public IEnumerable<PersonalResponse> ListPersonal()
+        {
+            IEnumerable<PersonalResponse> response;
+
+            using (var connection = new SqlConnection(AppSettingValue.ConnectionDataBase))
+            {
+                var parameters = new DynamicParameters();
+                var resultResponse = connection.QueryAsync<PersonalResponse>(
+                    $"{IncomeDataProcedures.Schema.Cnfg}.{IncomeDataProcedures.Procedure.ListPersonal}",
                     parameters,
                     commandType: CommandType.StoredProcedure).Result;
 

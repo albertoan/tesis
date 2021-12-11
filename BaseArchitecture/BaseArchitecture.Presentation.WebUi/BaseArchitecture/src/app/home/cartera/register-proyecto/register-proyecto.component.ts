@@ -234,7 +234,6 @@ export class RegisterProyectoComponent implements OnInit {
       
       this.proyecto.FechaDesde = this.datepipe.transform(this.SinceDate, 'dd/MM/yyyy');
       this.proyecto.FechaHasta = this.datepipe.transform(this.UntilDate, 'dd/MM/yyyy');
-      debugger
       this.proyecto.Estado = "1";
       this.proyecto.Insumos = this.insumos;
       this.proyecto.Insumos.TipoRegistro = "1";

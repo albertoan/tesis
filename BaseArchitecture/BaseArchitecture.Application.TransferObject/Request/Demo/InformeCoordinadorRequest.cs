@@ -51,6 +51,8 @@ namespace BaseArchitecture.Application.TransferObject.Request.Demo
 		public string Cableado { set; get; }
 		public string TipoRegistro { set; get; }
 		public string TipoObra { set; get; }
+		public string Longitud { set; get; }
+		public string Latitud { set; get; }
 		public List<ProyectoActividadesRequest> Actividades { set; get; }
 		public EvidenciaRequest Evidencia { set; get; }
 	}

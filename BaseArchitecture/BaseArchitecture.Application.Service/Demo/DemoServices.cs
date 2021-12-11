@@ -104,6 +104,18 @@ namespace BaseArchitecture.Application.Service.Demo
             return result;
         }
 
+        public Response<List<CronogramaResponse>> ListCumplimientobyProyecto(CronogramaRequest cronogramaRequest)
+        {
+            var result = DemoQuery.ListCumplimientobyProyecto(cronogramaRequest).ToList();
+
+            var response = new Response<List<CronogramaResponse>>()
+            {
+                Value = result
+            };
+            return response;
+
+        }
+
 
         public Response<PersonResponse> GetPersonById(PersonBaseRequest personBaseRequest)
         {
@@ -161,21 +173,40 @@ namespace BaseArchitecture.Application.Service.Demo
             var result = DemoQuery.RegInformeCoordinador(informeCoordinadorRequest);
             var idProyecto = result.Value;
 
-            //using (var transaction = new TransactionScope())
-            //{
-            //    try
-            //    {
-            //        foreach (var itemOrderDetail in proyectoRequest.ProyectoActividadesRequest)
-            //        {
-            //            DemoTransaction.RegCronograma(itemOrderDetail, idProyecto);
-            //        }
-            //        transaction.Complete();
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        //result = 99;
-            //    }
-            //}
+            using (var transaction = new TransactionScope())
+            {
+                try
+                {
+                    foreach (var item in informeCoordinadorRequest.Actividades)
+                    {
+                        DemoTransaction.RegCronogramaCoordinador(item);
+                    }
+
+                    transaction.Complete();
+                }
+                catch (Exception e)
+                {
+                    //result = 99;
+                }
+            }
+
+            using (var transactionAttachedFile = new TransactionScope())
+            {
+                try
+                {
+                    foreach (var attachedFile in informeCoordinadorRequest.Evidencia.AttachedFile)
+                    {
+                        DemoTransaction.RegAttachedFile(attachedFile);
+                    }
+
+                    transactionAttachedFile.Complete();
+                }
+                catch (Exception e)
+                {
+                    //result = 99;
+                }
+            }
+
 
             return result;
         }
@@ -368,6 +399,64 @@ namespace BaseArchitecture.Application.Service.Demo
                 Value = result
             };
             return response;
+        }
+        public Response<int> RegPersonal(PersonalRequest personalRequest)
+        {
+            var result = new Response<int>(1);
+            using (var transaction = new TransactionScope())
+            {
+                try
+                {
+                    DemoTransaction.RegPersonal(personalRequest);
+                    transaction.Complete();
+                }
+                catch (Exception e)
+                {
+                    TraceLogger.RegisterExceptionDemand(JsonConvert.SerializeObject(e));
+                    result = new Response<int>(0);
+                }
+            }
+            return result;
+        }
+        public Response<List<PersonalResponse>> ListPersonal()
+        {
+            var result = DemoQuery.ListPersonal().ToList();
+
+            var response = new Response<List<PersonalResponse>>()
+            {
+                Value = result
+            };
+            return response;
+        }
+
+
+
+
+        public Response<byte[]> ListPersonalRpt()
+        {
+            var result = DemoQuery.ListPersonal().ToList();
+
+            string[] columns = {
+                 "Nombre"
+                ,"ApellidoPaterno"
+                ,"ApellidoMaterno"
+                ,"Correo"
+                ,"Telefono"
+                ,"EstadoDes"
+                ,"ZonaDes"
+                ,"AsignadoDes"
+                ,"CargoDes"
+            };
+
+            var listBytes = Util.ExcelExportHelper.ExportExcel(result, string.Empty, true, columns);
+
+            var response = new Response<byte[]>()
+            {
+                Value = listBytes
+            };
+
+            return response;
+
         }
     }
 }

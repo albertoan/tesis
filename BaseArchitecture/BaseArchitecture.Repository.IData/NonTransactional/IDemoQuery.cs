@@ -21,6 +21,7 @@ namespace BaseArchitecture.Repository.IData.NonTransactional
         Response<int> RegInformeCoordinador(InformeCoordinadorRequest informeCoordinadorRequest); 
         Response<ProyectoResponse> GetProyectoById(ProyectoRequest proyectoRequest);
         Response<ProyectoResponse> GetListProyectoByIdProyecto(ProyectoRequest proyectoRequest);
+        IEnumerable<CronogramaResponse> ListCumplimientobyProyecto(CronogramaRequest cronogramaRequest); 
         Response<OffLineInformeResponse> ListProyectoInforme();
         IEnumerable<CronogramaResponse> ListProyectoCronograma(); 
         Response<LoginResponse> ValidateUser(string email);
@@ -31,5 +32,6 @@ namespace BaseArchitecture.Repository.IData.NonTransactional
         IEnumerable<RptCantidadProyectosPorTipoProyectoResponse> RptCantidadProyectosPorTipoProyecto();
         IEnumerable<RptCostoPorDepartamentoResponse> RptCostoPorDepartamento();
         IEnumerable<RptCostoPorTipoProyectoResponse> RptCostoPorTipoProyecto();
+        IEnumerable<PersonalResponse> ListPersonal();
     }
 }

@@ -131,9 +131,9 @@ export class ProgramarComponent implements OnInit {
     this.listPersonal = this.listPersonalOriginal.filter(x => x.IdZona == this.Zona);
   };
 
-  typeaheadOnSelectEmployee = (e: TypeaheadMatch): void => {
-    this.nombreCompleto = e.item.NombreCompleto;
-    this.idCoordinador = e.item.IdCoordinador;
+  typeaheadOnSelectEmployee = (value): void => {
+    // this.nombreCompleto = e.item.NombreCompleto;
+    this.idCoordinador = value;
   };
 
   loadProyecto = () =>{

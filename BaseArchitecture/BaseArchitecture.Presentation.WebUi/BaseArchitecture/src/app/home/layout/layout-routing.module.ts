@@ -24,6 +24,23 @@ const routes: Routes = [
           canActivate: [AuthGuard],
       },
       {
+        path: 'personal',
+        loadChildren: () =>
+          import('src/app/home/personal/personal.module').then(
+            (m) => m.PersonalModule
+          ),
+          canActivate: [AuthGuard],
+      },
+      {
+        path: 'personal/register',
+        loadChildren: () =>
+          import('src/app/home/personal/register-personal/register-personal.module').then(
+            (m) => m.RegisterPersonalModule
+          ),
+      },
+      
+
+      {
         path: 'programar',
         loadChildren: () =>
           import('src/app/home/programar/programar.module').then(
@@ -39,6 +56,25 @@ const routes: Routes = [
           ),
           canActivate: [AuthGuard],
       },
+
+      {
+        path: 'informes',
+        loadChildren: () =>
+          import('src/app/home/supervisar/supervisar.module').then(
+            (m) => m.SupervisarModule
+          ),
+          canActivate: [AuthGuard],
+      },
+
+      {
+        path: 'reportes',
+        loadChildren: () =>
+          import('src/app/home/reportes/reportes.module').then(
+            (m) => m.ReportesModule
+          ),
+          canActivate: [AuthGuard],
+      },
+
       {
         path: 'cartera/detail',
         loadChildren: () =>

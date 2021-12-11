@@ -137,6 +137,17 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
         }
 
         [HttpGet]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListPersonalRpt)]
+        public IHttpActionResult ListPersonalRpt()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.ListPersonalRpt}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<byte[]>>(urlApi, string.Empty);
+            return Ok(result);
+        }
+
+        [HttpGet]
         [RequestLoggerFilterAttribute]
         [UnControlledExceptionFilterAttribute]
         [Route(IncomeWebApi.MethodApi.Siscose.GetProyectoById)]
@@ -364,6 +375,48 @@ namespace BaseArchitecture.Distributed.ApiGateway.Controllers
             return Ok(result);
         }
 
+        [HttpPost]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Demo.RegPersonal)]
+        public IHttpActionResult RegPersonal(PersonalRequest personalRequest)
+        {
+            var postData = Newtonsoft.Json.JsonConvert.SerializeObject(personalRequest);
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Demo.RegPersonal}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<int>>(urlApi,
+                    postData);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListPersonal)]
+        public IHttpActionResult ListPersonal()
+        {
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.ListPersonal}";
+            var result =
+                InvokeWebApi.InvokePostAnonymousEntity<Response<List<PersonalResponse>>>(urlApi, string.Empty);
+            return Ok(result);
+        }
+
+
+        [HttpGet]
+        [RequestLoggerFilterAttribute]
+        [UnControlledExceptionFilterAttribute]
+        [Route(IncomeWebApi.MethodApi.Siscose.ListCumplimientobyProyecto)]
+        public IHttpActionResult ListCumplimientobyProyecto()
+        {
+            var postData = HttpContext.Current.Request.Params["cronogramaRequest"];
+            var urlApi =
+                $"{AppSettingValue.UrlWebApi}/{IncomeWebApi.PrefixApi.Siscose}/{IncomeWebApi.MethodApi.Siscose.ListCumplimientobyProyecto}";
+            var result =
+              InvokeWebApi.InvokePostAnonymousEntity<Response<List<CronogramaResponse>>>(urlApi, postData);
+            return Ok(result);
+        }
 
     }
 }

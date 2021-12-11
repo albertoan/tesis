@@ -9,6 +9,7 @@
         {
             public const string Demo = "Demo";
             public const string Core = "Core";
+            public const string Cnfg = "Cnfg";
         }
 
         /// <summary>
@@ -26,12 +27,14 @@
             public const string ListPersonAll = "USP_LIST_PersonAll";
 
             public const string RegPerson = "USP_REG_Person";
+            public const string RegPersonal = "USP_REG_Personal";
 
             public const string UpdPersonState = "USP_UPD_PersonState";
 
             
             public const string GetProyectoById = "USP_GET_ProyectoById";
             public const string ListProyectos = "USP_LIST_Proyectos";
+            public const string ListPersonal = "USP_LIST_Personal";
             public const string ListProyectoCodigo = "USP_LIST_ProyectosCodigo";
             public const string ListProyectoByIdProyecto= "USP_LIST_ProyectosbyIdProyecto";
             public const string ListUbigeo = "USP_LIST_Ubigeo";
@@ -53,7 +56,9 @@
             public const string RptCantidadProyectosPorTipoProyecto = "USP_RPT_CantidadProyectosPorTipoProyecto";
             public const string RptCostoPorDepartamento = "USP_RPT_CostoPorDepartamento";
             public const string RptCostoPorTipoProyecto = "USP_RPT_CostoPorTipoProyecto";
-            public const string RegInformeCoordinador = "USP_REG_InformeCoordinador"; 
+            public const string RegInformeCoordinador = "USP_REG_InformeCoordinador";
+            public const string RegAttachedFile = "USP_REG_AttachedFile";
+            public const string ListCumplimientobyProyecto = "USP_LIST_CumplimientobyProyecto";
         }
     }
 }
